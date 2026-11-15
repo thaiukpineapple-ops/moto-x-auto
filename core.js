@@ -652,7 +652,17 @@ function applySettings(s) {
 
 async function connectLive() {
   if (!window.supabase || !window.supabase.createClient) { D.sync = 'error'; AUTH.ready = true; scheduleRender(); return; }
-  sb = window.supabase.createClient(CFG.url, CFG.key, { auth: { persistSession: true, autoRefreshToken: true } });
+  // each app keeps its own sign-in, so signing in to the Owner app doesn't sign in the Workers app on the same phone
+  const storageKey = 'mxa-auth-' + KIND;
+  try {
+    const ref = (String(CFG.url).match(/^https:\/\/([^.]+)\./) || [])[1];
+    const shared = ref && localStorage.getItem('sb-' + ref + '-auth-token');
+    if (shared) {  // one-time move of the old shared session: it belonged to the owner
+      if (!localStorage.getItem('mxa-auth-owner')) localStorage.setItem('mxa-auth-owner', shared);
+      localStorage.removeItem('sb-' + ref + '-auth-token');
+    }
+  } catch (e) { /* storage unavailable */ }
+  sb = window.supabase.createClient(CFG.url, CFG.key, { auth: { persistSession: true, autoRefreshToken: true, storageKey: storageKey } });
   try { const s = JSON.parse(lsGet('motoapp.settings') || 'null'); if (s) applySettings(s); } catch (e) { /* ignore */ }
   sb.from('settings').select('data').eq('id', 'shop').maybeSingle().then(({ data }) => {
     if (data && data.data) { applySettings(data.data); lsSet('motoapp.settings', JSON.stringify(data.data)); scheduleRender(); }
@@ -688,6 +698,7 @@ async function onSession(session) {
     AUTH.ready = true; COLS.forEach(c => { D[c] = new Map(); }); D.profiles = new Map();
     D.sync = navigator.onLine ? 'live' : 'offline';
     setRole(kindRoles(S.appKind)[0]); readHash(); render();
+    AUTH.wasOut = true;
     return;
   }
   const { data: prof } = await sb.from('profiles').select('*').eq('id', uid).maybeSingle();
@@ -695,7 +706,8 @@ async function onSession(session) {
   if (!allowedRoles().length) { readHash(); render(); return; }
   if (AUTH.profile.role === 'mechanic' || !S.me) S.me = AUTH.profile.role === 'mechanic' ? AUTH.profile.name : S.me;
   loadCache(uid);
-  if (allowedRoles().indexOf(S.role) < 0) setRole(defaultRole());
+  if (AUTH.wasOut || allowedRoles().indexOf(S.role) < 0) setRole(defaultRole());  // a fresh sign-in starts on the account's main role
+  AUTH.wasOut = false;
   readHash();
   if (location.hash === '#signin') location.hash = S.view; else render();
   D.sync = 'connecting'; scheduleRender();
