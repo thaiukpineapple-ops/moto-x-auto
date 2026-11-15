@@ -1,6 +1,12 @@
 {
+ "id": "./",
  "name": "Moto x Auto Staff",
  "short_name": "MxA Staff",
+ "description": "Job cards, inspections, parts proof and stock for mechanics and front desk.",
+ "categories": [
+  "business",
+  "productivity"
+ ],
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
