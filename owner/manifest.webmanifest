@@ -1,6 +1,12 @@
 {
+ "id": "./",
  "name": "Moto x Auto Owner",
  "short_name": "MxA Owner",
+ "description": "Dashboard, approvals, reports, stock and settings for the owner.",
+ "categories": [
+  "business",
+  "productivity"
+ ],
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
