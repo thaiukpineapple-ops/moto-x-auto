@@ -1,6 +1,12 @@
 {
+ "id": "./",
  "name": "Moto x Auto",
  "short_name": "Moto x Auto",
+ "description": "Book a repair and follow it live, with photos of every part we replace.",
+ "categories": [
+  "business",
+  "productivity"
+ ],
  "start_url": "./",
  "scope": "./",
  "display": "standalone",

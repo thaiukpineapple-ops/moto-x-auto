@@ -85,6 +85,17 @@ a.btn { text-decoration: none; color: inherit; } a.btn.primary { color: var(--ac
 .roles .seg button { flex: 1; padding: 6px 4px; font-size: 13px; gap: 4px; }
 @media (max-width: 380px) { .roles .seg button .ic { display: none; } }
 .meta-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 16px 8px; min-height: 22px; }
+.install-bar { margin: 0 16px 8px; padding: 10px 12px; border-radius: 12px; background: var(--accent-soft); display: grid; gap: 8px; font-size: 14px; }
+.install-bar .row { gap: 6px; flex-wrap: wrap; }
+.steps-n { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.apps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.app-tile { display: grid; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; align-content: start; }
+.app-ic { width: 44px; height: 44px; border-radius: 10px; }
+.app-head { display: flex; gap: 10px; align-items: center; }
+.app-head > span { flex: 1; min-width: 0; }
+.app-acts { display: flex; gap: 6px; flex-wrap: wrap; }
+.app-qr { width: 100%; max-width: 200px; justify-self: center; image-rendering: pixelated; background: #fff; border-radius: 8px; padding: 6px; box-sizing: border-box; }
+.app-url { font-size: 12px; word-break: break-all; color: var(--muted); }
 .meta-row select { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 2px 8px; font-size: 13px; }
 .sync { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
 .sync i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); display: inline-block; }

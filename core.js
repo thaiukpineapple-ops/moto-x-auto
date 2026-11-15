@@ -4,6 +4,15 @@
 /* ================= words ================= */
 const T = {
 en: {
+  install_btn: 'Install app', install_bar: 'Install this app on your phone. It opens from your home screen, no app store needed.', install_title: 'Install the app',
+  install_ios_1: 'Tap the Share button (the square with an arrow) in the browser toolbar.', install_ios_2: 'Scroll down and tap "Add to Home Screen".', install_ios_3: 'Tap "Add". The app icon appears on your home screen.',
+  install_and_1: 'Tap the ⋮ menu at the top right of Chrome.', install_and_2: 'Tap "Install app" or "Add to Home screen".', install_and_3: 'Tap "Install". The app icon appears on your home screen.',
+  install_pc: 'In Chrome or Edge, click the install icon at the right end of the address bar, or open the ⋮ menu and choose "Install".',
+  install_inapp: 'The browser inside LINE and Facebook can\'t install apps. Open this page in your phone\'s browser first.', install_fb: 'In Facebook or Instagram: tap ⋯ at the top right, then "Open in browser".',
+  open_browser: 'Open in browser', installed: 'App installed', not_now: 'Not now',
+  apps_title: 'Get the apps', apps_note: 'Scan a code to open the app, then install it. Copied links open in the phone\'s browser even when tapped in LINE.',
+  apps_for_customer: 'For customers: booking and tracking', apps_for_worker: 'For mechanics and front desk', apps_for_owner: 'For the owner', copy_link: 'Copy link', share: 'Share',
+  msg_link: 'Track it here: {u}',
   proof_title: 'Parts proof', proof_intro: 'Every part we replaced: the old part, the new part in its box, and the new part fitted.', proof_none: 'No parts replaced yet.',
   photo_old: 'Old part, removed', photo_box: 'New part in its box: brand label and part number visible', photo_fitted: 'New part fitted on the vehicle',
   cap_old: 'Old part', cap_box: 'New part & box', cap_fitted: 'Fitted', need_three: 'Take all 3 photos and pick the part type.',
@@ -114,6 +123,15 @@ en: {
   update_ph: 'e.g. Rear pads worn, replacing now', logo: 'Shop logo', logo_hint: 'PNG with a transparent background looks best.', front_desk: 'Front desk', time_h: '{h} h', est_waiting_owner: 'Waiting for owner', who: 'Who', none_short: '—'
 },
 th: {
+  install_btn: 'ติดตั้งแอป', install_bar: 'ติดตั้งแอปนี้บนมือถือ เปิดจากหน้าจอโฮมได้เลย ไม่ต้องโหลดจาก Store', install_title: 'ติดตั้งแอป',
+  install_ios_1: 'แตะปุ่มแชร์ (สี่เหลี่ยมมีลูกศรชี้ขึ้น) ในแถบเครื่องมือของเบราว์เซอร์', install_ios_2: 'เลื่อนลงแล้วแตะ "เพิ่มไปยังหน้าจอโฮม"', install_ios_3: 'แตะ "เพิ่ม" ไอคอนแอปจะอยู่บนหน้าจอโฮม',
+  install_and_1: 'แตะเมนู ⋮ มุมขวาบนของ Chrome', install_and_2: 'แตะ "ติดตั้งแอป" หรือ "เพิ่มลงในหน้าจอหลัก"', install_and_3: 'แตะ "ติดตั้ง" ไอคอนแอปจะอยู่บนหน้าจอหลัก',
+  install_pc: 'ใน Chrome หรือ Edge คลิกไอคอนติดตั้งทางขวาของช่องที่อยู่เว็บ หรือเปิดเมนู ⋮ แล้วเลือก "ติดตั้ง"',
+  install_inapp: 'เบราว์เซอร์ใน LINE และ Facebook ติดตั้งแอปไม่ได้ เปิดหน้านี้ในเบราว์เซอร์ของมือถือก่อน', install_fb: 'ใน Facebook หรือ Instagram: แตะ ⋯ มุมขวาบน แล้วเลือก "เปิดในเบราว์เซอร์"',
+  open_browser: 'เปิดในเบราว์เซอร์', installed: 'ติดตั้งแอปแล้ว', not_now: 'ไว้ทีหลัง',
+  apps_title: 'ลิงก์และ QR ของแอป', apps_note: 'สแกน QR เพื่อเปิดแอป แล้วกดติดตั้ง ลิงก์ที่คัดลอกจากตรงนี้จะเปิดในเบราว์เซอร์ของมือถือ แม้กดจาก LINE',
+  apps_for_customer: 'สำหรับลูกค้า: จองคิวและติดตามงาน', apps_for_worker: 'สำหรับช่างและหน้าร้าน', apps_for_owner: 'สำหรับเจ้าของร้าน', copy_link: 'คัดลอกลิงก์', share: 'แชร์',
+  msg_link: 'ติดตามงานได้ที่: {u}',
   proof_title: 'หลักฐานการเปลี่ยนอะไหล่', proof_intro: 'อะไหล่ทุกชิ้นที่เราเปลี่ยน: อะไหล่เก่า อะไหล่ใหม่พร้อมกล่อง และรูปหลังติดตั้ง', proof_none: 'ยังไม่ได้เปลี่ยนอะไหล่',
   photo_old: 'อะไหล่เก่าที่ถอดออก', photo_box: 'อะไหล่ใหม่พร้อมกล่อง เห็นยี่ห้อและรหัสอะไหล่', photo_fitted: 'อะไหล่ใหม่ที่ติดตั้งแล้ว',
   cap_old: 'อะไหล่เก่า', cap_box: 'อะไหล่ใหม่และกล่อง', cap_fitted: 'ติดตั้งแล้ว', need_three: 'ถ่ายรูปให้ครบ 3 รูป และเลือกประเภทอะไหล่',
@@ -237,8 +255,12 @@ const ST_IC = { booked: 'calendar', received: 'key', inspection: 'inspect', appr
 const ROLE_IC = { customer: 'user', mechanic: 'wrench', desk: 'store', owner: 'crown' };
 const TAB_IC = { work: 'wrench', overview: 'receipt', inspect: 'inspect', parts: 'box', photos: 'camera', chat: 'chat', pay: 'cash', history: 'history' };
 const LOGO_SRC = window.APP_LOGO || "";
-function logoSrc() { return (D && D.settings && D.settings.logo) || (LOGO_SRC.indexOf('/*') === 0 ? '' : LOGO_SRC); }
-function logoHtml(cls) { const s = logoSrc(); return s ? '<img class="' + (cls || 'logo') + '" alt="" src="' + esc(s) + '">' : '<svg class="logo-mark" aria-hidden="true"><use href="#i-mark"/></svg>'; }
+function logoSrc(full) {
+  const own = D && D.settings && D.settings.logo; if (own) return own;
+  if (!full && window.APP_MARK) return window.APP_MARK;
+  return LOGO_SRC.indexOf('/*') === 0 ? '' : LOGO_SRC;
+}
+function logoHtml(cls) { const s = logoSrc(/big|full/.test(cls || '')); return s ? '<img class="' + (cls || 'logo') + '" alt="" src="' + esc(s) + '">' : '<svg class="logo-mark" aria-hidden="true"><use href="#i-mark"/></svg>'; }
 function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
 
 /* ================= constants ================= */
@@ -768,6 +790,62 @@ function staffSettingsHtml() {
       ${['pending', 'mechanic', 'desk', 'owner'].map(r => `<option value="${r}"${p.role === r ? ' selected' : ''}>${esc(t('role_' + r))}</option>`).join('')}</select></td></tr>`).join('')}</tbody></table></div></div>`;
 }
 
+/* ================= install (home-screen app) ================= */
+const SITE = window.APP_SITE ? String(window.APP_SITE).replace(/\/?$/, '/') : '';
+const APP_PATH = { customer: '', worker: 'staff/', owner: 'owner/' };
+const appUrl = k => SITE ? SITE + APP_PATH[k] : '';
+const extUrl = u => {
+  const i = u.indexOf('#'), base = i >= 0 ? u.slice(0, i) : u, hash = i >= 0 ? u.slice(i) : '';
+  return /[?&]openExternalBrowser=/.test(base) ? u : base + (base.indexOf('?') >= 0 ? '&' : '?') + 'openExternalBrowser=1' + hash;
+};
+const UA = navigator.userAgent || '';
+const INST = {
+  prompt: null,
+  standalone: !!((window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true),
+  ios: /iPhone|iPad|iPod/.test(UA) || (/Macintosh/.test(UA) && navigator.maxTouchPoints > 1),
+  android: /Android/.test(UA),
+  inapp: /\bLine\//i.test(UA) ? 'line' : /FBAN|FBAV|FB_IAB|Instagram/i.test(UA) ? 'fb' : '',
+  key: 'motoapp.installbar.' + KIND
+};
+const canInstall = () => KIND !== 'all' && !INST.standalone;
+const showInstallBar = () => canInstall() && !lsGet(INST.key) && !!(INST.prompt || INST.ios || INST.inapp);
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); INST.prompt = e; scheduleRender(); });
+window.addEventListener('appinstalled', () => { INST.prompt = null; INST.standalone = true; toast(t('installed')); scheduleRender(); });
+function doInstall() {
+  if (INST.prompt && !INST.inapp) {
+    const e = INST.prompt; INST.prompt = null;
+    e.prompt();
+    (e.userChoice || Promise.resolve({})).then(c => { if (c && c.outcome === 'accepted') { lsSet(INST.key, '1'); } scheduleRender(); });
+    return;
+  }
+  S.dlg = { type: 'install' }; renderDialog();
+}
+function installDialogHtml() {
+  const steps = a => `<ol class="steps-n">${a.map(k => `<li>${esc(t(k))}</li>`).join('')}</ol>`;
+  let body;
+  if (INST.inapp) body = `<p>${esc(t('install_inapp'))}</p>${INST.inapp === 'line' ? `<a class="btn primary block" href="${esc(extUrl(location.href))}">${ic('globe')}${esc(t('open_browser'))}</a>` : `<p class="note">${esc(t('install_fb'))}</p>`}`;
+  else if (INST.ios) body = steps(['install_ios_1', 'install_ios_2', 'install_ios_3']);
+  else if (INST.android) body = steps(['install_and_1', 'install_and_2', 'install_and_3']);
+  else body = `<p>${esc(t('install_pc'))}</p>`;
+  return `<div class="row" style="gap:12px">${logoHtml()}<h2 style="margin:0">${esc(t('install_title'))}</h2></div>${body}<button class="btn" data-act="dlgno">${esc(t('close'))}</button>`;
+}
+function installBarHtml() {
+  if (!showInstallBar()) return '';
+  const act = INST.inapp === 'line' ? `<a class="btn sm primary" href="${esc(extUrl(location.href))}">${ic('globe')}${esc(t('open_browser'))}</a>`
+    : `<button class="btn sm primary" data-act="install">${ic('download')}${esc(t('install_btn'))}</button>`;
+  return `<div class="install-bar"><span>${esc(INST.inapp ? t('install_inapp') : t('install_bar'))}</span><div class="row">${act}<button class="btn sm ghost" data-act="installno">${esc(t('not_now'))}</button></div></div>`;
+}
+function appsCardHtml() {
+  if (!SITE) return '';
+  const qr = u => { try { const q = window.qrcode(0, 'M'); q.addData(extUrl(u)); q.make(); return `<img class="app-qr" alt="QR" src="${q.createDataURL(4, 2)}">`; } catch (e) { return ''; } };
+  return `<div class="card span"><h3>${ic('download')}${esc(t('apps_title'))}</h3><p class="sub">${esc(t('apps_note'))}</p><div class="apps-grid">${['customer', 'worker', 'owner'].map(k => {
+    const u = appUrl(k);
+    return `<div class="app-tile"><div class="app-head"><img class="app-ic" alt="" src="${esc(u)}icon-192.png" onerror="this.style.visibility='hidden'"><span><b>${esc(t('app_' + k))}</b><br><small class="note">${esc(t('apps_for_' + k))}</small></span></div>
+      ${typeof window.qrcode === 'function' ? qr(u) : ''}<a class="mono app-url" href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//, ''))}</a>
+      <div class="app-acts"><button type="button" class="btn sm" data-act="copyapp" data-v="${k}">${ic('copy')}${esc(t('copy_link'))}</button>${navigator.share ? `<button type="button" class="btn sm" data-act="shareapp" data-v="${k}">${ic('send')}${esc(t('share'))}</button>` : ''}</div></div>`;
+  }).join('')}</div></div>`;
+}
+
 /* ================= routing ================= */
 const VIEWS = ['signin', 'book', 'track', 'shop', 'myjobs', 'stock', 'today', 'board', 'newjob', 'dash', 'reports', 'settings'];
 const VIEW_ROLES = { signin: ['customer', 'mechanic', 'desk', 'owner'], shop: ['customer'], book: ['customer'], track: ['customer'], myjobs: ['mechanic'], today: ['desk', 'owner'], newjob: ['desk', 'owner'], dash: ['owner'], reports: ['owner'], settings: ['owner'],
@@ -836,9 +914,10 @@ function renderTop() {
     <div class="seg" role="group" aria-label="Language"><button data-act="lang" data-v="th" aria-pressed="${lang === 'th'}">TH</button><button data-act="lang" data-v="en" aria-pressed="${lang === 'en'}">EN</button></div></div>
     ${KIND === 'all' ? `<div class="roles apps"><div class="seg" role="group" aria-label="App">${['customer', 'worker', 'owner'].map(k => `<button data-act="appkind" data-v="${k}" aria-pressed="${S.appKind === k}">${ic(k === 'customer' ? 'user' : k === 'worker' ? 'wrench' : 'crown')}${esc(t('app_' + k))}</button>`).join('')}</div></div>` : ''}
     ${allowedRoles().length > 1 && S.view !== 'signin' ? `<div class="roles"><div class="seg" role="group" aria-label="Role">${allowedRoles().map(r => `<button data-act="role" data-v="${r}" aria-pressed="${S.role === r}">${ic(ROLE_IC[r])}${esc(t('role_' + r))}</button>`).join('')}</div></div>` : ''}
-    <div class="meta-row"><span class="sync ${D.sync}"><i></i>${esc(t('sync_' + D.sync))}</span>
+    <div class="meta-row"><span class="sync ${D.sync}"><i></i>${esc(t('sync_' + D.sync))}</span><span class="row" style="gap:6px">
+    ${canInstall() ? `<button class="btn sm ghost" data-act="install">${ic('download', 'sm')}${esc(t('install_btn'))}</button>` : ''}
     ${LIVE && S.appKind !== 'customer' ? (AUTH.user ? `<button class="btn sm ghost" data-act="signout">${ic('logout', 'sm')}${esc(isStaff() ? (AUTH.profile.name || t('sign_out')) : t('sign_out'))}</button>` : (S.view === 'signin' ? '' : `<button class="btn sm ghost" data-act="go" data-v="signin">${ic('lock', 'sm')}${esc(t('staff_btn'))}</button>`)) : ''}
-    ${bs.length > 1 && S.role !== 'customer' ? `<label class="note" for="f-branch">${esc(t('branch'))} <select id="f-branch" data-act="branch">${bs.map(b => `<option${b === curBranch() ? ' selected' : ''}>${esc(b)}</option>`).join('')}</select></label>` : ''}</div>`;
+    ${bs.length > 1 && S.role !== 'customer' ? `<label class="note" for="f-branch">${esc(t('branch'))} <select id="f-branch" data-act="branch">${bs.map(b => `<option${b === curBranch() ? ' selected' : ''}>${esc(b)}</option>`).join('')}</select></label>` : ''}</span></div>${installBarHtml()}`;
 }
 function renderNav() {
   if (S.view === 'signin') { document.getElementById('nav').innerHTML = ''; return; }
@@ -1067,7 +1146,7 @@ function chatHtml(j, mine) {
 }
 function receiptHtml(j) {
   const s = D.settings, tt = totals(j);
-  return `<div class="receipt"><div class="r-head">${logoSrc() ? logoHtml() : ''}<div class="r-shop">${esc(s.name)}</div>${s.address ? `<div>${esc(s.address)}</div>` : ''}${s.phone ? `<div>${esc(t('phone'))} ${esc(s.phone)}</div>` : ''}</div>
+  return `<div class="receipt"><div class="r-head">${logoSrc(true) ? logoHtml('logo full') : ''}<div class="r-shop">${esc(s.name)}</div>${s.address ? `<div>${esc(s.address)}</div>` : ''}${s.phone ? `<div>${esc(t('phone'))} ${esc(s.phone)}</div>` : ''}</div>
     <div class="r-rule"></div><div><b>${esc(t('invoice'))} ${esc(j.ref)}</b><br>${esc(fmtLong(today()))}<br>${esc(vName(j.vehicle))}${plateText(j.vehicle) ? ' · ' + esc(plateText(j.vehicle)) : ''}${j.vehicle.vin ? '<br>VIN ' + esc(j.vehicle.vin) : ''}<br>${esc(j.customer.name)}</div>
     <div class="r-rule"></div>${linesHtml(j, { filter: l => l.state === 'approved' })}${totalsHtml(j, tt)}<div class="r-rule"></div><div style="text-align:center">${esc(t('thanks'))}</div></div>`;
 }
@@ -1620,7 +1699,7 @@ function viewSettings() {
   const dayNames = []; for (let d = 0; d < 7; d++) dayNames.push(new Intl.DateTimeFormat(loc(), { weekday: 'long' }).format(new Date(2026, 10, 15 + d)));
   const hasEx = COLS.some(c => Array.from(D[c].values()).some(o => o.example));
   return `<form class="view" data-form="settings"><div class="intro"><h1>${esc(t('settings_title'))}</h1><p class="sub">${esc(t('settings_note'))}</p></div>${roBanner()}<div class="banner">${esc(t('demo_roles'))}</div>
-    <div class="cols"><div class="card"><span class="lbl">${esc(t('logo'))}</span><div class="row">${s.logo ? `<img class="logo" style="height:56px;max-width:160px;background:#fff;padding:4px" alt="" src="${esc(s.logo)}">` : '<svg class="logo-mark" style="width:56px;height:56px" aria-hidden="true"><use href="#i-mark"/></svg>'}
+    <div class="cols"><div class="card"><span class="lbl">${esc(t('logo'))}</span><div class="row">${s.logo || logoSrc(true) ? `<img class="logo" style="height:56px;max-width:160px;background:#fff;padding:4px" alt="" src="${esc(s.logo || logoSrc(true))}">` : '<svg class="logo-mark" style="width:56px;height:56px" aria-hidden="true"><use href="#i-mark"/></svg>'}
       <label class="btn sm" for="f-ph-logo">${ic('upload')}${esc(t('add_photo'))}</label><input type="file" accept="image/*" id="f-ph-logo" data-photo-target="logo" style="position:absolute;width:1px;height:1px;opacity:0">
       ${s.logo ? `<button type="button" class="btn sm ghost" data-act="clearlogo">${esc(t('remove'))}</button>` : ''}</div><p class="note">${esc(t('logo_hint'))}</p>
       ${inp('setDraft.name', s.name, t('shop_name'))}${inp('setDraft.address', s.address, t('address'), { ph: 'Taling Chan, Bangkok' })}
@@ -1631,7 +1710,7 @@ function viewSettings() {
     <div class="card">${inp('setDraft.mechanics', s.mechanics, t('mechanics'))}${inp('setDraft.branches', s.branches, t('branches'))}
       <div class="grid2">${inp('setDraft.bigJob', s.bigJob, t('big_job'), { mode: 'numeric' })}${inp('setDraft.discountLimit', s.discountLimit, t('disc_limit'), { mode: 'numeric' })}</div>
       <label class="switch" for="f-vat"><input type="checkbox" id="f-vat" data-bind="setDraft.vat"${s.vat ? ' checked' : ''}>${esc(t('vat_on'))}</label></div>
-    ${staffSettingsHtml()}<div class="card"><h3>${esc(t('prices'))}</h3>${SERVICES.map(sv => `<div class="svc-price"><span>${esc(svcName(sv.key))}</span>
+    ${staffSettingsHtml()}${appsCardHtml()}<div class="card"><h3>${esc(t('prices'))}</h3>${SERVICES.map(sv => `<div class="svc-price"><span>${esc(svcName(sv.key))}</span>
       ${['bike', 'car'].map((vt, i) => `<input class="input" aria-label="${esc(svcName(sv.key) + ' ' + t('vt_' + vt))}" inputmode="numeric" data-bind="setDraft.prices.${sv.key}.${i}" value="${esc((s.prices[sv.key] || [0, 0])[i])}"${sv.for !== 'both' && sv.for !== vt ? ' disabled' : ''}>`).join('')}</div>`).join('')}</div></div>
     <button class="btn primary block" type="submit"${D.readonly ? ' disabled' : ''}>${esc(t('save'))}</button>
     ${hasEx && !D.readonly ? `<button type="button" class="btn danger block" data-act="askexamples">${ic('trash')}${esc(t('clear_examples'))}</button>` : ''}</form>`;
@@ -1662,6 +1741,7 @@ function renderDialog() {
       ${ok ? '' : `<p class="note">${esc(t('need_three'))}</p>`}
       <div class="grid2"><button class="btn" data-act="dlgno">${esc(t('cancel'))}</button><button class="btn primary" data-act="dofit"${ok ? '' : ' disabled'}>${esc(t('confirm_fit'))}</button></div>`;
   }
+  if (d.type === 'install') h = installDialogHtml();
   if (d.type === 'odo') {
     const ok = odoReady(d);
     h = `<h2>${esc(t('odo_title'))} · ${esc(t('odo_' + d.side))}</h2>
@@ -1743,12 +1823,13 @@ function customerMsg(j) {
   const tt = totals(j), parts = [t('msg_hi', { n: j.customer.name }), t('msg_body', { b: vName(j.vehicle), s: stLabel(j.status, true) })];
   if (tt.total && (j.status === 'ready' || j.status === 'approval')) parts.push(t('msg_total', { t: baht(j.status === 'approval' ? estTotals(j).total : tt.due) }));
   parts.push(t('msg_code', { r: j.ref }));
+  if (SITE) parts.push(t('msg_link', { u: extUrl(appUrl('customer')) }));
   return parts.join(' ');
 }
 
 /* ================= actions ================= */
 const READ_ACTS = ['appkind', 'signout', 'authmode', 'lang', 'role', 'go', 'open', 'openjob', 'openpart', 'tab', 'pick', 'clearphoto', 'newbooking', 'trackref', 'trackpick', 'copybooking', 'estyn', 'estall', 'me',
-  'linekind', 'paymethod', 'copyinvoice', 'copymsg', 'apptday', 'boardmode', 'stockf', 'copyorder', 'period', 'lowstock', 'dlgno', 'fit', 'fitpt', 'fitold', 'odo', 'odofuel'];
+  'linekind', 'paymethod', 'copyinvoice', 'copymsg', 'apptday', 'boardmode', 'stockf', 'copyorder', 'period', 'lowstock', 'dlgno', 'fit', 'fitpt', 'fitold', 'odo', 'odofuel', 'install', 'installno', 'copyapp', 'shareapp'];
 const A = {
   lang: el => { lang = el.dataset.v; lsSet('motoapp.lang', lang); render(); },
   role: el => { const r = el.dataset.v; setRole(r); go(S.lastStaff[r] || HOME[r]); },
@@ -1877,6 +1958,10 @@ const A = {
     ev(j, 'odo_' + d.side, { km: km });
     saveJ(j); closeDlg(); render();
   },
+  install: () => doInstall(),
+  installno: () => { lsSet(INST.key, '1'); render(); },
+  copyapp: el => copy(extUrl(appUrl(el.dataset.v))),
+  shareapp: el => { const u = extUrl(appUrl(el.dataset.v)); navigator.share({ title: D.settings.name + ' · ' + t('app_' + el.dataset.v), url: u }).catch(() => {}); },
   oldgiven: () => withJob(j => { j.oldGivenAt = nowIso(); ev(j, 'old_given'); }),
   sendest: () => withJob(j => { mergeNotes(j); sendEstimate(j); }),
   convert: () => withJob(j => {
