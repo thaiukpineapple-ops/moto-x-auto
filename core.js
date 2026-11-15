@@ -4,6 +4,7 @@
 /* ================= words ================= */
 const T = {
 en: {
+  privacy: 'Privacy policy', book_privacy: 'By booking you agree to our {p}.',
   install_btn: 'Install app', install_bar: 'Install this app on your phone. It opens from your home screen, no app store needed.', install_title: 'Install the app',
   install_ios_1: 'Tap the Share button (the square with an arrow) in the browser toolbar.', install_ios_2: 'Scroll down and tap "Add to Home Screen".', install_ios_3: 'Tap "Add". The app icon appears on your home screen.',
   install_and_1: 'Tap the ⋮ menu at the top right of Chrome.', install_and_2: 'Tap "Install app" or "Add to Home screen".', install_and_3: 'Tap "Install". The app icon appears on your home screen.',
@@ -123,6 +124,7 @@ en: {
   update_ph: 'e.g. Rear pads worn, replacing now', logo: 'Shop logo', logo_hint: 'PNG with a transparent background looks best.', front_desk: 'Front desk', time_h: '{h} h', est_waiting_owner: 'Waiting for owner', who: 'Who', none_short: '—'
 },
 th: {
+  privacy: 'นโยบายความเป็นส่วนตัว', book_privacy: 'การจองถือว่าคุณยอมรับ{p}ของเรา',
   install_btn: 'ติดตั้งแอป', install_bar: 'ติดตั้งแอปนี้บนมือถือ เปิดจากหน้าจอโฮมได้เลย ไม่ต้องโหลดจาก Store', install_title: 'ติดตั้งแอป',
   install_ios_1: 'แตะปุ่มแชร์ (สี่เหลี่ยมมีลูกศรชี้ขึ้น) ในแถบเครื่องมือของเบราว์เซอร์', install_ios_2: 'เลื่อนลงแล้วแตะ "เพิ่มไปยังหน้าจอโฮม"', install_ios_3: 'แตะ "เพิ่ม" ไอคอนแอปจะอยู่บนหน้าจอโฮม',
   install_and_1: 'แตะเมนู ⋮ มุมขวาบนของ Chrome', install_and_2: 'แตะ "ติดตั้งแอป" หรือ "เพิ่มลงในหน้าจอหลัก"', install_and_3: 'แตะ "ติดตั้ง" ไอคอนแอปจะอยู่บนหน้าจอหลัก',
@@ -807,6 +809,12 @@ const INST = {
   inapp: /\bLine\//i.test(UA) ? 'line' : /FBAN|FBAV|FB_IAB|Instagram/i.test(UA) ? 'fb' : '',
   key: 'motoapp.installbar.' + KIND
 };
+// inside the Android app (Trusted Web Activity) there is nothing to install
+try {
+  if (/[?&]source=twa\b/.test(location.search) || String(document.referrer).indexOf('android-app://') === 0) sessionStorage.setItem('motoapp.twa', '1');
+  if (sessionStorage.getItem('motoapp.twa')) INST.standalone = true;
+} catch (e) {}
+const privacyUrl = () => SITE ? SITE + 'privacy.html' : 'privacy.html';
 const canInstall = () => KIND !== 'all' && !INST.standalone;
 const showInstallBar = () => canInstall() && !lsGet(INST.key) && !!(INST.prompt || INST.ios || INST.inapp);
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); INST.prompt = e; scheduleRender(); });
@@ -1175,7 +1183,8 @@ function viewShop() {
     <div class="card"><h3>${esc(t('svc_prices'))}</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th class="r">${ic('scooter')}</th><th class="r">${ic('car')}</th></tr></thead><tbody>
       ${SERVICES.map(sv => `<tr><td><span class="row" style="flex-wrap:nowrap">${ic(SVC_IC[sv.key])}${esc(svcName(sv.key))}</span></td><td class="r">${cell(sv.for !== 'car', priceFor(sv.key, 'bike'))}</td><td class="r">${cell(sv.for !== 'bike', priceFor(sv.key, 'car'))}</td></tr>`).join('')}
       </tbody></table></div><p class="note">${esc(t('from_note'))}</p></div>
-    <button class="btn primary block" data-act="go" data-v="book">${ic('calendar')}${esc(t('book_now'))}</button></div>`;
+    <button class="btn primary block" data-act="go" data-v="book">${ic('calendar')}${esc(t('book_now'))}</button>
+    <p class="note" style="text-align:center"><a href="${esc(privacyUrl())}" target="_blank" rel="noopener">${esc(t('privacy'))}</a></p></div>`;
 }
 function openDays() {
   const out = [], s = D.settings;
@@ -1218,7 +1227,8 @@ function viewBook() {
     <section class="section"><div class="section-head"><h2>${esc(t('sec_when'))}</h2><span class="num">04</span></div><div class="hscroll days">${days.map(dayChip).join('')}</div>${slots}</section>
     <section class="section"><div class="section-head"><h2>${esc(t('sec_you'))}</h2><span class="num">05</span></div>${contactFields('form', f)}</section>
     ${S.err ? `<p class="err" role="alert">${esc(S.err)}</p>` : ''}
-    <button class="btn primary block" type="submit"${D.readonly || S.busy ? ' disabled' : ''}>${ic('calendar')}${esc(t('submit_book'))}</button></form>`;
+    <button class="btn primary block" type="submit"${D.readonly || S.busy ? ' disabled' : ''}>${ic('calendar')}${esc(t('submit_book'))}</button>
+    <p class="note" style="text-align:center">${t('book_privacy', { p: `<a href="${esc(privacyUrl())}" target="_blank" rel="noopener">${esc(t('privacy'))}</a>` })}</p></form>`;
 }
 function viewBooked(j) {
   return `<div class="view"><div class="intro"><h1>${esc(t('booked_title'))}</h1><p class="sub">${esc(t('booked_sub'))}</p></div>
