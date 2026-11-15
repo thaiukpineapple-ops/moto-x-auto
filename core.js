@@ -4,6 +4,18 @@
 /* ================= words ================= */
 const T = {
 en: {
+  proof_title: 'Parts proof', proof_intro: 'Every part we replaced: the old part, the new part in its box, and the new part fitted.', proof_none: 'No parts replaced yet.',
+  photo_old: 'Old part, removed', photo_box: 'New part in its box: brand label and part number visible', photo_fitted: 'New part fitted on the vehicle',
+  cap_old: 'Old part', cap_box: 'New part & box', cap_fitted: 'Fitted', need_three: 'Take all 3 photos and pick the part type.',
+  fit_intro2: 'This proof is shown to the customer on their tracking page.', part_brand: 'Brand', part_no: 'Part number', ptype: 'Part type',
+  pt_genuine: 'Genuine (OEM)', pt_aftermarket: 'Aftermarket brand', pt_used: 'Used part', old_handling: 'Old part',
+  old_return: 'Give back to customer', old_dispose: 'Shop disposes of it', old_status_return: 'Old part kept for you: collect it at pickup',
+  old_status_given: 'Old part given back to you {d}', old_status_dispose: 'Old part disposed of by the shop', fitted_by: 'Fitted {d} by {m}',
+  old_to_give: 'Old parts to give back', mark_given: 'Given to customer', ev_old_given: 'Old parts given back to customer',
+  odo_title: 'Mileage & fuel', odo_in: 'Drop-off', odo_out: 'Pickup', odo_record_in: 'Record drop-off', odo_record_out: 'Record pickup',
+  odo_photo: 'Dashboard photo: odometer and fuel gauge', odo_km: 'Odometer (km)', fuel: 'Fuel', odo_need: 'Add the photo, the km reading and the fuel level.',
+  odo_hint: 'Dashboard photo at drop-off and at pickup.', ev_odo_in: 'Drop-off mileage: {km} km', ev_odo_out: 'Pickup mileage: {km} km',
+  odo_out_first: 'No pickup mileage and fuel photo yet.', km_driven: '{n} km driven while at the shop', not_yet: 'Not recorded yet',
   app_customer: 'Customer app', app_worker: 'Workers app', app_owner: 'Owner app', badge_worker: 'Staff', badge_owner: 'Owner',
   wrong_app: 'This account uses a different app', wrong_app_owner: 'This app is for the shop owner. Mechanics and front desk use the Workers app.', wrong_app_worker: 'This app is for mechanics and front desk.',
   owner_signin: 'Owner sign in', owner_signin_sub: 'Dashboard, approvals, reports, stock and settings.', nav_shop: 'Shop', shop_hours: 'Opening hours', closed_on_d: 'Closed on {d}',
@@ -102,6 +114,18 @@ en: {
   update_ph: 'e.g. Rear pads worn, replacing now', logo: 'Shop logo', logo_hint: 'PNG with a transparent background looks best.', front_desk: 'Front desk', time_h: '{h} h', est_waiting_owner: 'Waiting for owner', who: 'Who', none_short: '—'
 },
 th: {
+  proof_title: 'หลักฐานการเปลี่ยนอะไหล่', proof_intro: 'อะไหล่ทุกชิ้นที่เราเปลี่ยน: อะไหล่เก่า อะไหล่ใหม่พร้อมกล่อง และรูปหลังติดตั้ง', proof_none: 'ยังไม่ได้เปลี่ยนอะไหล่',
+  photo_old: 'อะไหล่เก่าที่ถอดออก', photo_box: 'อะไหล่ใหม่พร้อมกล่อง เห็นยี่ห้อและรหัสอะไหล่', photo_fitted: 'อะไหล่ใหม่ที่ติดตั้งแล้ว',
+  cap_old: 'อะไหล่เก่า', cap_box: 'อะไหล่ใหม่และกล่อง', cap_fitted: 'ติดตั้งแล้ว', need_three: 'ถ่ายรูปให้ครบ 3 รูป และเลือกประเภทอะไหล่',
+  fit_intro2: 'หลักฐานนี้จะแสดงให้ลูกค้าเห็นในหน้าติดตามงาน', part_brand: 'ยี่ห้อ', part_no: 'รหัสอะไหล่', ptype: 'ประเภทอะไหล่',
+  pt_genuine: 'แท้ศูนย์', pt_aftermarket: 'อะไหล่เทียบ (ยี่ห้ออื่น)', pt_used: 'อะไหล่มือสอง', old_handling: 'อะไหล่เก่า',
+  old_return: 'คืนให้ลูกค้า', old_dispose: 'ร้านทิ้งให้', old_status_return: 'เก็บอะไหล่เก่าไว้ให้คุณ รับได้ตอนรับรถ',
+  old_status_given: 'คืนอะไหล่เก่าให้คุณแล้ว {d}', old_status_dispose: 'ร้านทิ้งอะไหล่เก่าให้แล้ว', fitted_by: 'ติดตั้ง {d} โดย {m}',
+  old_to_give: 'อะไหล่เก่าที่ต้องคืนลูกค้า', mark_given: 'คืนลูกค้าแล้ว', ev_old_given: 'คืนอะไหล่เก่าให้ลูกค้าแล้ว',
+  odo_title: 'เลขไมล์และน้ำมัน', odo_in: 'ตอนรับรถ', odo_out: 'ตอนส่งมอบ', odo_record_in: 'บันทึกตอนรับรถ', odo_record_out: 'บันทึกตอนส่งมอบ',
+  odo_photo: 'รูปหน้าปัด: เลขไมล์และเกจน้ำมัน', odo_km: 'เลขไมล์ (กม.)', fuel: 'น้ำมัน', odo_need: 'ใส่รูป เลขไมล์ และระดับน้ำมันให้ครบ',
+  odo_hint: 'ถ่ายรูปหน้าปัดตอนรับรถและตอนส่งมอบ', ev_odo_in: 'เลขไมล์ตอนรับรถ: {km} กม.', ev_odo_out: 'เลขไมล์ตอนส่งมอบ: {km} กม.',
+  odo_out_first: 'ยังไม่ได้ถ่ายรูปเลขไมล์และน้ำมันตอนส่งมอบ', km_driven: 'วิ่งเพิ่ม {n} กม. ระหว่างอยู่ที่ร้าน', not_yet: 'ยังไม่ได้บันทึก',
   app_customer: 'แอปลูกค้า', app_worker: 'แอปพนักงาน', app_owner: 'แอปเจ้าของ', badge_worker: 'พนักงาน', badge_owner: 'เจ้าของ',
   wrong_app: 'บัญชีนี้ใช้กับแอปอื่น', wrong_app_owner: 'แอปนี้สำหรับเจ้าของร้าน ช่างและหน้าร้านใช้แอปพนักงาน', wrong_app_worker: 'แอปนี้สำหรับช่างและหน้าร้าน',
   owner_signin: 'เจ้าของร้านเข้าสู่ระบบ', owner_signin_sub: 'ภาพรวม การอนุมัติ รายงาน สต็อก และการตั้งค่า', nav_shop: 'ร้าน', shop_hours: 'เวลาเปิดทำการ', closed_on_d: 'ปิดทุก{d}',
@@ -845,6 +869,11 @@ function inp(bind, val, label, o) {
   o = o || {};
   return `<div class="field"><label for="${fid(bind)}">${esc(label)}</label><input class="input" id="${fid(bind)}" data-bind="${bind}" value="${esc(val)}"${o.type ? ` type="${o.type}"` : ''}${o.mode ? ` inputmode="${o.mode}"` : ''}${o.ph ? ` placeholder="${esc(o.ph)}"` : ''}${o.list ? ` list="${o.list}"` : ''}${o.ac ? ` autocomplete="${o.ac}"` : ''}${o.dis ? ' disabled' : ''}></div>`;
 }
+function photoTile(target, val, cap) {
+  const id = 'f-ph-' + target.replace(/[^a-z0-9]/gi, '-');
+  return `<div class="shot"><label for="${id}">${val ? `<img alt="" src="${esc(val)}">` : `<span class="shot-empty">${ic('camera')}</span>`}<span class="shot-cap">${esc(cap)}</span></label>
+    <input type="file" accept="image/*" capture="environment" id="${id}" data-photo-target="${target}"></div>`;
+}
 function photoPicker(target, val, label) {
   const id = fid('ph-' + target);
   return `<div class="photo-pick">${val ? `<img class="thumb" alt="" src="${esc(val)}">` : ''}<label class="btn sm" for="${id}">${ic('camera')}${esc(label || (val ? t('change_photo') : t('add_photo')))}</label>
@@ -921,7 +950,7 @@ function linesHtml(j, o) {
       if (can('estimate') && l.stock !== 'fitted') a.push(`<button class="btn sm ghost" data-act="delline" data-v="${esc(l.id)}" aria-label="${esc(t('remove') + ' ' + l.desc)}">${esc(t('remove'))}</button>`);
       if (a.length) acts = `<div class="acts">${a.join('')}</div>`;
     }
-    const pair = l.before || l.after ? `<div class="pair"><div class="ph"><img alt="" data-photo="${esc(l.before || '')}"><span>${esc(t('before'))}</span></div><div class="ph"><img alt="" data-photo="${esc(l.after || '')}"><span>${esc(t('after'))}</span></div></div>` : '';
+    const pair = l.kind === 'part' ? `${proofMetaHtml(l)}${o.stock ? proofTrioHtml(l) : ''}` : '';
     return `<div class="line ${l.state}"><span><span class="kind">${chips.join(' ')}</span><span class="desc">${esc(l.desc)}${q !== 1 ? ' × ' + q : ''}</span></span>${right}${pair}${acts}</div>`;
   }).join('') + '</div>';
 }
@@ -964,20 +993,67 @@ function dviReport(j, editable) {
         ${d.note ? `<p>${esc(d.note)}</p>` : ''}${d.photo ? `<img class="photo-big" alt="" data-photo="${esc(d.photo)}">` : ''}</div>`;
     }).join('');
 }
-function galleryHtml(j) {
-  if (!j.photos.length) return `<p class="note">${esc(t('no_photos'))}</p>`;
+const PROOF_KINDS = ['before', 'box', 'after'];
+const PT_CLS = { genuine: 'ok', aftermarket: 'info', used: 'warn' };
+function proofTrioHtml(l) {
+  const cells = [['before', 'cap_old'], ['box', 'cap_box'], ['after', 'cap_fitted']].filter(c => l[c[0]]);
+  if (!cells.length) return '';
+  return `<div class="trio n${cells.length}">${cells.map(c => `<div class="ph"><img alt="${esc(t(c[1]) + ': ' + l.desc)}" data-photo="${esc(l[c[0]])}"><span>${esc(t(c[1]))}</span></div>`).join('')}</div>`;
+}
+function proofMetaHtml(l) {
+  const bits = [];
+  if (l.ptype) bits.push(`<span class="mini ${PT_CLS[l.ptype] || 'info'}">${esc(t('pt_' + l.ptype))}</span>`);
+  if (l.brand) bits.push(`<span>${esc(t('part_brand'))} <b>${esc(l.brand)}</b></span>`);
+  if (l.partNo) bits.push(`<span>${esc(t('part_no'))} <b class="mono">${esc(l.partNo)}</b></span>`);
+  return bits.length ? `<div class="pmeta">${bits.join('')}</div>` : '';
+}
+function oldStatusText(j, l) {
+  if (l.oldPart === 'dispose') return t('old_status_dispose');
+  if (l.oldPart === 'return') return j.oldGivenAt ? t('old_status_given', { d: fmtWhen(j.oldGivenAt) }) : t('old_status_return');
+  return '';
+}
+function proofCardHtml(j) {
+  const ls = j.lines.filter(l => l.kind === 'part' && l.state === 'approved' && l.stock === 'fitted');
+  if (!ls.length) return '';
+  return `<div class="card"><h3>${ic('shield')}${esc(t('proof_title'))}</h3><p class="sub">${esc(t('proof_intro'))}</p>
+    <div class="proofs">${ls.map(l => { const q = Number(l.qty) || 0, os = oldStatusText(j, l);
+      return `<div class="proof"><b class="pdesc">${esc(l.desc)}${q !== 1 ? ' × ' + q : ''}</b>${proofMetaHtml(l)}${proofTrioHtml(l)}
+        <p class="note">${l.fittedAt ? esc(t('fitted_by', { d: fmtWhen(l.fittedAt), m: l.fittedBy || '' })) : ''}${os ? (l.fittedAt ? ' · ' : '') + esc(os) : ''}</p></div>`; }).join('')}</div></div>`;
+}
+const FUEL = ['E', '1/4', '1/2', '3/4', 'F'];
+const fuelLabel = f => ({ '1/4': '¼', '1/2': '½', '3/4': '¾' })[f] || f || '';
+function odoSideHtml(j, side, edit) {
+  const o = (j.odo || {})[side];
+  if (o) return `<div class="odo-side"><span class="lbl">${esc(t('odo_' + side))}</span><div class="ph"><img alt="${esc(t('odo_photo'))}" data-photo="${esc(o.photo)}"></div>
+    <p class="odo-read"><b class="mono">${esc(Number(o.km).toLocaleString('en-US'))} km</b> · ${esc(t('fuel'))} <b>${esc(fuelLabel(o.fuel))}</b></p><small class="note">${esc(fmtWhen(o.at))}${o.by ? ' · ' + esc(o.by) : ''}</small></div>`;
+  const can_ = edit && (side === 'in' || (j.odo && j.odo.in));
+  return `<div class="odo-side"><span class="lbl">${esc(t('odo_' + side))}</span>${can_ ? `<button class="btn sm" data-act="odo" data-v="${side}">${ic('camera')}${esc(t('odo_record_' + side))}</button>` : `<p class="note">${esc(t('not_yet'))}</p>`}</div>`;
+}
+function odoCardHtml(j, edit) {
+  const o = j.odo || {};
+  if (!edit && !o.in && !o.out) return '';
+  const driven = o.in && o.out ? Number(o.out.km) - Number(o.in.km) : null;
+  return `<div class="card"><h3>${ic('gauge')}${esc(t('odo_title'))}</h3>${edit && !o.in ? `<p class="sub">${esc(t('odo_hint'))}</p>` : ''}
+    <div class="odo">${odoSideHtml(j, 'in', edit)}${odoSideHtml(j, 'out', edit)}</div>
+    ${driven != null && driven >= 0 ? `<p class="note">${esc(t('km_driven', { n: driven.toLocaleString('en-US') }))}</p>` : ''}</div>`;
+}
+function galleryHtml(j, opt) {
+  const skip = opt && opt.skipProof;
+  const all = skip ? j.photos.filter(p => !(p.lineId && PROOF_KINDS.indexOf(p.kind) >= 0) && p.kind !== 'odo_in' && p.kind !== 'odo_out') : j.photos;
+  if (!all.length) return `<p class="note">${esc(t('no_photos'))}</p>`;
   const lineOf = id => j.lines.find(l => l.id === id);
   return STAGES.concat(['cancelled']).map(s => {
-    const ps = j.photos.filter(p => (p.stage || 'received') === s);
+    const ps = all.filter(p => (p.stage || 'received') === s);
     if (!ps.length) return '';
     const done = {}, out = [];
     ps.forEach(p => {
-      if ((p.kind === 'before' || p.kind === 'after') && p.lineId) {
+      if (PROOF_KINDS.indexOf(p.kind) >= 0 && p.lineId) {
         if (done[p.lineId]) return; done[p.lineId] = 1;
-        const l = lineOf(p.lineId), b = ps.find(x => x.lineId === p.lineId && x.kind === 'before'), a = ps.find(x => x.lineId === p.lineId && x.kind === 'after');
-        out.push(`<div class="ph" style="grid-column:1/-1"><b>${esc(l ? l.desc : '')}</b><div class="ba">${b ? `<div class="ph"><img alt="" data-photo="${esc(b.id)}"><span>${esc(t('before'))}</span></div>` : '<span></span>'}${a ? `<div class="ph"><img alt="" data-photo="${esc(a.id)}"><span>${esc(t('after'))}</span></div>` : ''}</div></div>`);
+        const l = lineOf(p.lineId), cap = { before: 'cap_old', box: 'cap_box', after: 'cap_fitted' };
+        const cells = PROOF_KINDS.map(k => ps.find(x => x.lineId === p.lineId && x.kind === k)).filter(Boolean);
+        out.push(`<div class="ph" style="grid-column:1/-1"><b>${esc(l ? l.desc : '')}</b><div class="trio n${cells.length}">${cells.map(c => `<div class="ph"><img alt="" data-photo="${esc(c.id)}"><span>${esc(t(cap[c.kind]))}</span></div>`).join('')}</div></div>`);
       } else {
-        const label = p.kind === 'dvi' && p.item ? t('dvi_' + p.item) : p.kind === 'customer' ? t('customer') : (p.caption || '');
+        const label = p.kind === 'dvi' && p.item ? t('dvi_' + p.item) : p.kind === 'customer' ? t('customer') : p.kind === 'odo_in' || p.kind === 'odo_out' ? t('odo_title') + ' · ' + t(p.kind) : (p.caption || '');
         out.push(`<div class="ph"><img alt="" data-photo="${esc(p.id)}"><span>${esc(label)} ${esc(fmtWhen(p.at))}</span></div>`);
       }
     });
@@ -1142,7 +1218,8 @@ function trackDetail(j) {
     ${est}${pay}
     <div class="card"><h3>${esc(t('progress'))}</h3>${stepperHtml(j, true)}</div>
     ${showDvi ? `<div class="card"><h3>${esc(t('inspection_report'))}</h3>${dviReport(j, false)}</div>` : ''}
-    <div class="card"><h3>${esc(t('photos'))}</h3>${galleryHtml(j)}</div>
+    ${proofCardHtml(j)}${odoCardHtml(j, false)}
+    <div class="card"><h3>${esc(t('photos'))}</h3>${galleryHtml(j, { skipProof: true })}</div>
     <div class="card"><h3>${esc(t('updates'))}</h3>${notes.length ? `<div class="feed">${notes.map(e => `<div class="post"><span class="meta">${esc(fmtWhen(e.at))}${e.by ? ' · ' + esc(e.by) : ''}</span>${e.text ? `<p>${esc(e.text)}</p>` : ''}${e.photo ? `<img class="photo-big" alt="" data-photo="${esc(e.photo)}">` : ''}</div>`).join('')}</div>` : `<p class="note">${esc(t('no_updates'))}</p>`}</div>
     <div class="card"><h3>${esc(t('chat'))}</h3>${chatHtml(j, 'customer')}</div>
     ${j.lines.some(l => l.state === 'approved') ? `<div class="card"><h3>${esc(t('invoice'))}</h3>${linesHtml(j, { filter: l => l.state === 'approved' })}${totalsHtml(j, tt)}</div>` : ''}
@@ -1222,7 +1299,7 @@ function tabWork(j) {
   const cp = j.photos.find(p => p.kind === 'customer');
   return `<div class="card">${actionHtml(j)}</div>${timerHtml(j)}
     ${j.problem || cp ? `<div class="card"><h3>${esc(t('problem'))}</h3>${j.problem ? `<p>${esc(j.problem)}</p>` : ''}${cp ? `<img class="photo-big" alt="" data-photo="${esc(cp.id)}">` : ''}</div>` : ''}
-    ${tasksHtml(j)}${noteFormHtml()}`;
+    ${odoCardHtml(j, can('photos'))}${tasksHtml(j)}${noteFormHtml()}`;
 }
 function tabOverview(j) {
   const c = j.customer, v = j.vehicle, cp = j.photos.find(p => p.kind === 'customer');
@@ -1241,7 +1318,7 @@ function tabOverview(j) {
       <dt>${esc(t('vtype'))}</dt><dd>${esc(t(v.type === 'car' ? 'vt_car' : 'vt_bike'))}</dd>${plateText(v) ? `<dt>${esc(t('plate'))}</dt><dd>${esc(plateText(v))}</dd>` : ''}${v.vin ? `<dt>VIN</dt><dd>${esc(v.vin)}</dd>` : ''}${v.mileage ? `<dt>${esc(t('mileage'))}</dt><dd>${esc(Number(v.mileage).toLocaleString('en-US'))}</dd>` : ''}
       <dt>${esc(t('booked_for'))}</dt><dd>${esc(j.source === 'walkin' ? t('walkin') + ' · ' + fmtDay(j.date) + ' ' + j.time : fmtDay(j.date) + ' ' + j.time)}</dd></dl>
       ${j.problem ? `<span class="lbl">${esc(t('problem'))}</span><p>${esc(j.problem)}</p>` : ''}${cp ? `<img class="photo-big" alt="" data-photo="${esc(cp.id)}">` : ''}</div>
-    ${tasksHtml(j)}${noteFormHtml()}
+    ${odoCardHtml(j, can('photos') || can('checkin'))}${tasksHtml(j)}${noteFormHtml()}
     <div class="card span"><h3>${esc(t('progress'))}</h3><div class="feed">${j.timeline.slice().reverse().map(e => {
       const txt = e.kind === 'status' ? stLabel(e.status) : e.kind === 'event' ? evText(e) : e.text;
       return `<div class="post${e.kind !== 'note' ? ' ev' : ''}"><span class="meta">${esc(fmtWhen(e.at))}${e.by ? ' · ' + esc(e.by === 'customer' ? t('by_customer') : e.by) : ''}</span>${txt ? `<p>${esc(txt)}</p>` : ''}${e.photo ? `<img class="photo-big" alt="" data-photo="${esc(e.photo)}">` : ''}</div>`;
@@ -1258,6 +1335,8 @@ function evText(e) {
   if (e.event === 'needed') return t('ev_needed', { p: e.part });
   if (e.event === 'big_ok') return t('ev_big_ok');
   if (e.event === 'disc') return t('ev_disc', { p: e.pct, s: e.s });
+  if (e.event === 'odo_in' || e.event === 'odo_out') return t('ev_' + e.event, { km: Number(e.km).toLocaleString('en-US') });
+  if (e.event === 'old_given') return t('ev_old_given');
   return e.event || '';
 }
 function tabInspect(j) {
@@ -1310,6 +1389,8 @@ function tabPay(j) {
       <form class="section" data-form="pay">${inp('pay.amount', P.amount !== '' ? P.amount : tt.due, t('amount'), { mode: 'decimal' })}${P.method === 'promptpay' && amt > 0 ? qrHtml(amt) : ''}<button class="btn primary" type="submit">${ic('cash')}${esc(t('record'))}</button></form>` : ''}
     ${j.payments.length ? `<h3>${esc(t('payments'))}</h3><div class="tbl-wrap"><table class="tbl"><tbody>${j.payments.map(p => `<tr><td>${esc(fmtWhen(p.at))}</td><td>${esc(t('pm_' + p.method))}</td><td class="r">${baht(p.amount)}</td></tr>`).join('')}</tbody></table></div>` : ''}
     <div class="grid2"><button class="btn" data-act="copyinvoice">${ic('receipt')}${esc(t('copy_invoice'))}</button><button class="btn" data-act="copymsg">${ic('copy')}${esc(t('copy_msg'))}</button></div>
+    ${oldToGive(j).length && can('checkin') ? `<div class="banner warn">${esc(t('old_to_give'))}: ${esc(oldToGive(j).map(l => l.desc).join(', '))}</div><button class="btn block" data-act="oldgiven">${ic('check')}${esc(t('mark_given'))}</button>` : ''}
+    ${j.status === 'ready' && j.odo && j.odo.in && !j.odo.out && can('checkin') ? `<div class="banner warn">${esc(t('odo_out_first'))}</div><button class="btn block" data-act="odo" data-v="out">${ic('camera')}${esc(t('odo_record_out'))}</button>` : ''}
     ${j.status === 'ready' && can('checkin') ? `<button class="btn dark block" data-act="complete">${ic('done')}${esc(t('act_complete'))}</button>` : ''}</div></div>`;
 }
 
@@ -1415,7 +1496,7 @@ function viewStock() {
     <div class="hscroll">${['all', 'low', 'needed', 'bike', 'car'].map(f => `<button class="chip sm" data-act="stockf" data-v="${f}" aria-pressed="${S.stockF === f}">${esc(f === 'bike' ? t('vt_bike') : f === 'car' ? t('vt_car') : t('f_' + f))}</button>`).join('')}</div>
     ${S.role !== 'mechanic' ? reorderCard() : ''}<div id="stock-body">${stockBody()}</div></div>`;
 }
-function blankPart() { return { id: '', sku: '', barcode: '', name: '', category: 'other', fits: 'both', cost: '', price: '', onHand: 0, reserved: 0, reorderLevel: 2, reorderQty: 5, shelf: '', supplier: '', loc: curBranch() }; }
+function blankPart() { return { id: '', sku: '', barcode: '', name: '', brand: '', ptype: '', category: 'other', fits: 'both', cost: '', price: '', onHand: 0, reserved: 0, reorderLevel: 2, reorderQty: 5, shelf: '', supplier: '', loc: curBranch() }; }
 function viewPart() {
   const isNew = S.id === 'new', p = isNew ? null : D.parts.get(S.id);
   if (!isNew && !p) return `<div class="view"><button class="back" data-act="go" data-v="stock">‹ ${esc(t('stock_title'))}</button><div class="empty">${esc(t('no_parts'))}</div></div>`;
@@ -1423,6 +1504,7 @@ function viewPart() {
   const P = S.partDraft, edit = can('stock_edit');
   const form = edit ? `<form class="card" data-form="part"><h2>${esc(isNew ? t('new_part') : t('save'))}</h2>
       ${inp('partDraft.name', P.name, t('part_name'))}<div class="grid2">${inp('partDraft.sku', P.sku, t('sku'))}${inp('partDraft.barcode', P.barcode, t('barcode'))}</div>
+      <div class="grid2">${inp('partDraft.brand', P.brand || '', t('part_brand'))}<div class="field"><label for="f-pptype">${esc(t('ptype'))}</label><select class="input" id="f-pptype" data-bind="partDraft.ptype"><option value=""${!P.ptype ? ' selected' : ''}>—</option>${['genuine', 'aftermarket', 'used'].map(k => `<option value="${k}"${P.ptype === k ? ' selected' : ''}>${esc(t('pt_' + k))}</option>`).join('')}</select></div></div>
       <div class="grid2"><div class="field"><label for="f-pcat">${esc(t('category'))}</label><select class="input" id="f-pcat" data-bind="partDraft.category">${PART_CATS.map(c => `<option value="${c}"${P.category === c ? ' selected' : ''}>${esc(t('cat_' + c))}</option>`).join('')}</select></div>
       <div class="field"><label for="f-pfits">${esc(t('fits'))}</label><select class="input" id="f-pfits" data-bind="partDraft.fits">${['bike', 'car', 'both'].map(c => `<option value="${c}"${P.fits === c ? ' selected' : ''}>${esc(c === 'both' ? t('fits_both') : t('vt_' + c))}</option>`).join('')}</select></div></div>
       <div class="grid2">${can('cost') ? inp('partDraft.cost', P.cost, t('cost'), { mode: 'decimal' }) : ''}${inp('partDraft.price', P.price, t('sell'), { mode: 'decimal' })}</div>
@@ -1435,7 +1517,7 @@ function viewPart() {
   return `<div class="view"><button class="back" data-act="go" data-v="stock">‹ ${esc(t('stock_title'))}</button>
     <div class="card"><div class="section-head"><h1 style="font-size:24px">${esc(p.name)}</h1>${isLow(p) ? `<span class="mini bad">${esc(t('low'))}</span>` : ''}</div>
       <div class="kpis k4"><div class="kpi st-ready"><b>${avail(p)}</b><span>${esc(t('available'))}</span></div><div class="kpi"><b>${p.onHand}</b><span>${esc(t('on_hand'))}</span></div><div class="kpi st-booked"><b>${p.reserved || 0}</b><span>${esc(t('reserved'))}</span></div><div class="kpi st-parts_wait"><b>${p.reorderLevel}</b><span>${esc(t('reorder_at'))}</span></div></div>
-      <dl class="dl"><dt>${esc(t('sku'))}</dt><dd>${esc(p.sku)}</dd>${p.barcode ? `<dt>${esc(t('barcode'))}</dt><dd>${esc(p.barcode)}</dd>` : ''}<dt>${esc(t('shelf'))}</dt><dd>${esc(p.shelf || '—')}</dd><dt>${esc(t('fits'))}</dt><dd>${esc(p.fits === 'both' ? t('fits_both') : t('vt_' + p.fits))}</dd>
+      <dl class="dl"><dt>${esc(t('sku'))}</dt><dd>${esc(p.sku)}</dd>${p.brand ? `<dt>${esc(t('part_brand'))}</dt><dd>${esc(p.brand)}</dd>` : ''}${p.ptype ? `<dt>${esc(t('ptype'))}</dt><dd>${esc(t('pt_' + p.ptype))}</dd>` : ''}${p.barcode ? `<dt>${esc(t('barcode'))}</dt><dd>${esc(p.barcode)}</dd>` : ''}<dt>${esc(t('shelf'))}</dt><dd>${esc(p.shelf || '—')}</dd><dt>${esc(t('fits'))}</dt><dd>${esc(p.fits === 'both' ? t('fits_both') : t('vt_' + p.fits))}</dd>
       ${S.role !== 'mechanic' ? `<dt>${esc(t('sell'))}</dt><dd>${baht(p.price)}</dd>` : ''}${can('cost') ? `<dt>${esc(t('cost'))}</dt><dd>${baht(p.cost)} · ${esc(t('margin'))} ${marginPct(p)}%</dd>` : ''}<dt>${esc(t('supplier'))}</dt><dd>${esc(p.supplier || '—')}</dd></dl></div>
     <div class="cols">
     ${edit ? `<form class="card" data-form="recv"><h3>${esc(t('receive'))}</h3><div class="grid2">${inp('recv.qty', S.recv.qty, t('qty'), { mode: 'numeric' })}${can('cost') ? inp('recv.cost', S.recv.cost, t('unit_cost'), { mode: 'decimal', ph: String(p.cost) }) : ''}</div><button class="btn dark" type="submit">${ic('box')}${esc(t('receive'))}</button></form>
@@ -1569,11 +1651,25 @@ function renderDialog() {
   if (d.type === 'fit') {
     const j = D.jobs.get(d.jobId), l = j && j.lines.find(x => x.id === d.lineId);
     if (!l) { S.dlg = null; return renderDialog(); }
-    h = `<h2>${esc(t('fit_title', { p: l.desc }))}</h2><p class="sub">${esc(t('fit_intro'))}</p>
-      <span class="lbl">${esc(t('photo_before'))}</span>${photoPicker('dlg.before', d.before)}
-      <span class="lbl">${esc(t('photo_after'))}</span>${photoPicker('dlg.after', d.after)}
-      ${d.before && d.after ? '' : `<p class="note">${esc(t('need_both'))}</p>`}
-      <div class="grid2"><button class="btn" data-act="dlgno">${esc(t('cancel'))}</button><button class="btn primary" data-act="dofit"${d.before && d.after ? '' : ' disabled'}>${esc(t('confirm_fit'))}</button></div>`;
+    const ok = fitReady(d);
+    h = `<h2>${esc(t('fit_title', { p: l.desc }))}</h2><p class="sub">${esc(t('fit_intro2'))}</p>
+      <div class="shots">${photoTile('dlg.before', d.before, '1 · ' + t('cap_old'))}${photoTile('dlg.box', d.box, '2 · ' + t('cap_box'))}${photoTile('dlg.after', d.after, '3 · ' + t('cap_fitted'))}</div>
+      <p class="note">1 · ${esc(t('photo_old'))}<br>2 · ${esc(t('photo_box'))}<br>3 · ${esc(t('photo_fitted'))}</p>
+      <span class="lbl">${esc(t('ptype'))}</span><div class="chips">${['genuine', 'aftermarket', 'used'].map(k => `<button type="button" class="chip sm" data-act="fitpt" data-v="${k}" aria-pressed="${d.ptype === k}">${esc(t('pt_' + k))}</button>`).join('')}</div>
+      <div class="grid2"><div class="field"><label for="f-dlg-brand">${esc(t('part_brand'))}</label><input class="input" id="f-dlg-brand" data-bind="dlg.brand" value="${esc(d.brand)}" maxlength="60"></div>
+        <div class="field"><label for="f-dlg-pno">${esc(t('part_no'))}</label><input class="input mono" id="f-dlg-pno" data-bind="dlg.partNo" value="${esc(d.partNo)}" maxlength="60"></div></div>
+      <span class="lbl">${esc(t('old_handling'))}</span><div class="chips">${['return', 'dispose'].map(k => `<button type="button" class="chip sm" data-act="fitold" data-v="${k}" aria-pressed="${d.old === k}">${esc(t('old_' + k))}</button>`).join('')}</div>
+      ${ok ? '' : `<p class="note">${esc(t('need_three'))}</p>`}
+      <div class="grid2"><button class="btn" data-act="dlgno">${esc(t('cancel'))}</button><button class="btn primary" data-act="dofit"${ok ? '' : ' disabled'}>${esc(t('confirm_fit'))}</button></div>`;
+  }
+  if (d.type === 'odo') {
+    const ok = odoReady(d);
+    h = `<h2>${esc(t('odo_title'))} · ${esc(t('odo_' + d.side))}</h2>
+      <div class="shots one">${photoTile('dlg.photo', d.photo, t('odo_photo'))}</div>
+      <div class="field"><label for="f-dlg-km">${esc(t('odo_km'))}</label><input class="input mono" id="f-dlg-km" inputmode="numeric" data-bind="dlg.km" value="${esc(d.km)}" data-odo-km="1"></div>
+      <span class="lbl">${esc(t('fuel'))}</span><div class="chips">${FUEL.map(f => `<button type="button" class="chip sm" data-act="odofuel" data-v="${f}" aria-pressed="${d.fuel === f}">${esc(fuelLabel(f))}</button>`).join('')}</div>
+      ${ok ? '' : `<p class="note">${esc(t('odo_need'))}</p>`}
+      <div class="grid2"><button class="btn" data-act="dlgno">${esc(t('cancel'))}</button><button class="btn primary" data-act="doodo"${ok ? '' : ' disabled'}>${esc(t('save'))}</button></div>`;
   }
   o.innerHTML = `<div class="dialog${S.role === 'mechanic' ? ' mech' : ''}">${h}</div>`;
   o.classList.remove('hidden');
@@ -1619,6 +1715,9 @@ function sendEstimate(j, force) {
   ev(j, 'est_sent', { amount: et.total });
   if (['received', 'inspection'].indexOf(j.status) >= 0) setStatus(j, 'approval');
 }
+function fitReady(d) { return !!(d.before && d.box && d.after && d.ptype); }
+function odoReady(d) { return !!(d.photo && num(d.km) > 0 && d.fuel); }
+function oldToGive(j) { return j.oldGivenAt ? [] : j.lines.filter(l => l.kind === 'part' && l.stock === 'fitted' && l.oldPart === 'return'); }
 function addPhotoMeta(j, data, meta) {
   const id = newId('ph');
   putPhoto(id, j.id, data);
@@ -1649,7 +1748,7 @@ function customerMsg(j) {
 
 /* ================= actions ================= */
 const READ_ACTS = ['appkind', 'signout', 'authmode', 'lang', 'role', 'go', 'open', 'openjob', 'openpart', 'tab', 'pick', 'clearphoto', 'newbooking', 'trackref', 'trackpick', 'copybooking', 'estyn', 'estall', 'me',
-  'linekind', 'paymethod', 'copyinvoice', 'copymsg', 'apptday', 'boardmode', 'stockf', 'copyorder', 'period', 'lowstock', 'dlgno', 'fit'];
+  'linekind', 'paymethod', 'copyinvoice', 'copymsg', 'apptday', 'boardmode', 'stockf', 'copyorder', 'period', 'lowstock', 'dlgno', 'fit', 'fitpt', 'fitold', 'odo', 'odofuel'];
 const A = {
   lang: el => { lang = el.dataset.v; lsSet('motoapp.lang', lang); render(); },
   role: el => { const r = el.dataset.v; setRole(r); go(S.lastStaff[r] || HOME[r]); },
@@ -1711,7 +1810,11 @@ const A = {
   complete: () => {
     const j = D.jobs.get(S.id); if (!j) return;
     const due = totals(j).due, doit = () => withJob(x => setStatus(x, 'completed'));
-    if (due > 0) ask(t('due_amt', { a: baht(due) }) + '. ' + t('act_complete') + '?', t('act_complete'), doit); else doit();
+    const warn = [];
+    if (j.odo && j.odo.in && !j.odo.out) warn.push(t('odo_out_first'));
+    if (oldToGive(j).length) warn.push(t('old_to_give') + ': ' + oldToGive(j).map(l => l.desc).join(', '));
+    if (due > 0) warn.push(t('due_amt', { a: baht(due) }));
+    if (warn.length) ask(warn.join('. ') + '. ' + t('act_complete') + '?', t('act_complete'), doit); else doit();
   },
   timer: () => {
     if (!S.me) { toast(t('pick_me')); return; }
@@ -1733,13 +1836,22 @@ const A = {
   delline: el => withJob(j => { const l = j.lines.find(x => x.id === el.dataset.v); if (!l) return; if (l.stock === 'reserved') unreserveLine(l); j.lines = j.lines.filter(x => x !== l); }),
   addpartline: el => addPartLine(el.dataset.v),
   linekind: el => { S.line.kind = el.dataset.v; if (S.line.kind === 'labour' && !S.line.price) S.line.price = ''; render(); },
-  fit: el => { S.dlg = { type: 'fit', jobId: S.id, lineId: el.dataset.v, before: null, after: null }; renderDialog(); },
+  fit: el => {
+    const j = D.jobs.get(S.id), l = j && j.lines.find(x => x.id === el.dataset.v), p = l && l.partId && D.parts.get(l.partId);
+    S.dlg = { type: 'fit', jobId: S.id, lineId: el.dataset.v, before: null, box: null, after: null, brand: (p && p.brand) || '', partNo: (p && p.sku) || '', ptype: (p && p.ptype) || '', old: 'return' };
+    renderDialog();
+  },
+  fitpt: el => { if (S.dlg) { S.dlg.ptype = el.dataset.v; renderDialog(); } },
+  fitold: el => { if (S.dlg) { S.dlg.old = el.dataset.v; renderDialog(); } },
   dofit: () => {
-    const d = S.dlg; if (!d || !d.before || !d.after) return;
+    const d = S.dlg; if (!d || !fitReady(d)) return;
     const j = cj(d.jobId); if (!j) return closeDlg();
     const l = j.lines.find(x => x.id === d.lineId); if (!l) return closeDlg();
     l.before = addPhotoMeta(j, d.before, { kind: 'before', lineId: l.id });
+    l.box = addPhotoMeta(j, d.box, { kind: 'box', lineId: l.id });
     l.after = addPhotoMeta(j, d.after, { kind: 'after', lineId: l.id });
+    l.brand = String(d.brand || '').trim().slice(0, 60); l.partNo = String(d.partNo || '').trim().slice(0, 60);
+    l.ptype = d.ptype; l.oldPart = d.old === 'dispose' ? 'dispose' : 'return';
     l.fittedAt = nowIso(); l.fittedBy = whoAmI();
     const p = l.partId && D.parts.get(l.partId);
     if (p) {
@@ -1753,6 +1865,19 @@ const A = {
     if (j.status === 'in_progress' && !unfitted(j).length) setStatus(j, 'parts_replaced');
     saveJ(j); closeDlg(); render();
   },
+  odo: el => { S.dlg = { type: 'odo', jobId: S.id, side: el.dataset.v === 'out' ? 'out' : 'in', photo: null, km: '', fuel: '' }; renderDialog(); },
+  odofuel: el => { if (S.dlg) { S.dlg.fuel = el.dataset.v; renderDialog(); } },
+  doodo: () => {
+    const d = S.dlg; if (!d || !odoReady(d)) return;
+    const j = cj(d.jobId); if (!j) return closeDlg();
+    const km = Math.round(num(d.km));
+    j.odo = Object.assign({}, j.odo);
+    j.odo[d.side] = { km: km, fuel: d.fuel, photo: addPhotoMeta(j, d.photo, { kind: 'odo_' + d.side }), at: nowIso(), by: whoAmI() };
+    if (d.side === 'in' && !j.vehicle.mileage) j.vehicle = Object.assign({}, j.vehicle, { mileage: String(km) });
+    ev(j, 'odo_' + d.side, { km: km });
+    saveJ(j); closeDlg(); render();
+  },
+  oldgiven: () => withJob(j => { j.oldGivenAt = nowIso(); ev(j, 'old_given'); }),
   sendest: () => withJob(j => { mergeNotes(j); sendEstimate(j); }),
   convert: () => withJob(j => {
     proposed(j).forEach(l => { l.state = 'approved'; });
@@ -2006,6 +2131,7 @@ document.addEventListener('input', e => {
   if (!b || el.type === 'checkbox' || el.tagName === 'SELECT') return;
   setPath(S, b, el.value);
   if (LIVE_SEARCH[b]) LIVE_SEARCH[b]();
+  if (el.dataset.odoKm && S.dlg) { const btn = document.querySelector('[data-act="doodo"]'); if (btn) btn.disabled = !odoReady(S.dlg); }
 });
 document.addEventListener('change', e => {
   const el = e.target;
