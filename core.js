@@ -4,6 +4,7 @@
 /* ================= words ================= */
 const T = {
 en: {
+  pay_due: 'Amount to pay', pay_at_shop: 'Pay at the shop when you collect your vehicle.',
   privacy: 'Privacy policy', book_privacy: 'By booking you agree to our {p}.',
   install_btn: 'Install app', install_bar: 'Install this app on your phone. It opens from your home screen, no app store needed.', install_title: 'Install the app',
   install_ios_1: 'Tap the Share button (the square with an arrow) in the browser toolbar.', install_ios_2: 'Scroll down and tap "Add to Home Screen".', install_ios_3: 'Tap "Add". The app icon appears on your home screen.',
@@ -124,6 +125,7 @@ en: {
   update_ph: 'e.g. Rear pads worn, replacing now', logo: 'Shop logo', logo_hint: 'PNG with a transparent background looks best.', front_desk: 'Front desk', time_h: '{h} h', est_waiting_owner: 'Waiting for owner', who: 'Who', none_short: '—'
 },
 th: {
+  pay_due: 'ยอดที่ต้องชำระ', pay_at_shop: 'ชำระเงินที่ร้านตอนรับรถ',
   privacy: 'นโยบายความเป็นส่วนตัว', book_privacy: 'การจองถือว่าคุณยอมรับ{p}ของเรา',
   install_btn: 'ติดตั้งแอป', install_bar: 'ติดตั้งแอปนี้บนมือถือ เปิดจากหน้าจอโฮมได้เลย ไม่ต้องโหลดจาก Store', install_title: 'ติดตั้งแอป',
   install_ios_1: 'แตะปุ่มแชร์ (สี่เหลี่ยมมีลูกศรชี้ขึ้น) ในแถบเครื่องมือของเบราว์เซอร์', install_ios_2: 'เลื่อนลงแล้วแตะ "เพิ่มไปยังหน้าจอโฮม"', install_ios_3: 'แตะ "เพิ่ม" ไอคอนแอปจะอยู่บนหน้าจอโฮม',
@@ -1297,7 +1299,8 @@ function trackDetail(j) {
       <div class="grid2"><button class="btn" data-act="estall">${esc(t('approve_all'))}</button><button class="btn primary" data-act="answer" data-v="${esc(j.id)}"${allAns && !D.readonly ? '' : ' disabled'}>${esc(t('send_answer'))}</button></div>
       ${allAns ? '' : `<p class="note">${esc(t('answer_all'))}</p>`}</div>`;
   }
-  const pay = (j.status === 'ready' || j.status === 'completed') && tt.due > 0 ? `<div class="card hl"><h2>${esc(t('pay_now'))}</h2>${totalsHtml(j, tt)}${qrHtml(tt.due)}<p class="note">${esc(t('scan_pay'))}</p></div>` : '';
+  const hasPP = !!D.settings.promptpay && digits(D.settings.promptpay).length >= 9;
+  const pay = (j.status === 'ready' || j.status === 'completed') && tt.due > 0 ? `<div class="card hl"><h2>${esc(hasPP ? t('pay_now') : t('pay_due'))}</h2>${totalsHtml(j, tt)}${hasPP ? `${qrHtml(tt.due)}<p class="note">${esc(t('scan_pay'))}</p>` : `<p class="note">${esc(t('pay_at_shop'))}</p>`}</div>` : '';
   const showDvi = j.dvi.some(d => d.rating) && (j.dviDone || j.estimate.status !== 'none');
   const notes = j.timeline.filter(e => e.kind === 'note').slice().reverse();
   return `<div class="card"><div class="tag-top"><span class="ref">${esc(j.ref)}</span>${j.example ? '<span class="tagchip">Example</span>' : ''}${pill(j.status, true)}</div>
@@ -1308,7 +1311,7 @@ function trackDetail(j) {
     <div class="card"><h3>${esc(t('progress'))}</h3>${stepperHtml(j, true)}</div>
     ${showDvi ? `<div class="card"><h3>${esc(t('inspection_report'))}</h3>${dviReport(j, false)}</div>` : ''}
     ${proofCardHtml(j)}${odoCardHtml(j, false)}
-    <div class="card"><h3>${esc(t('photos'))}</h3>${galleryHtml(j, { skipProof: true })}</div>
+    ${j.photos.some(p => !(p.lineId && PROOF_KINDS.indexOf(p.kind) >= 0) && p.kind !== 'odo_in' && p.kind !== 'odo_out') ? `<div class="card"><h3>${esc(t('photos'))}</h3>${galleryHtml(j, { skipProof: true })}</div>` : ''}
     <div class="card"><h3>${esc(t('updates'))}</h3>${notes.length ? `<div class="feed">${notes.map(e => `<div class="post"><span class="meta">${esc(fmtWhen(e.at))}${e.by ? ' · ' + esc(e.by) : ''}</span>${e.text ? `<p>${esc(e.text)}</p>` : ''}${e.photo ? `<img class="photo-big" alt="" data-photo="${esc(e.photo)}">` : ''}</div>`).join('')}</div>` : `<p class="note">${esc(t('no_updates'))}</p>`}</div>
     <div class="card"><h3>${esc(t('chat'))}</h3>${chatHtml(j, 'customer')}</div>
     ${j.lines.some(l => l.state === 'approved') ? `<div class="card"><h3>${esc(t('invoice'))}</h3>${linesHtml(j, { filter: l => l.state === 'approved' })}${totalsHtml(j, tt)}</div>` : ''}

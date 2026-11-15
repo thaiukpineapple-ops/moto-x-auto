@@ -74,6 +74,7 @@ a.btn { text-decoration: none; color: inherit; } a.btn.primary { color: var(--ac
 .top-row { display: flex; align-items: center; gap: 12px; padding: 10px 16px 6px; }
 .brand { flex: 1; min-width: 0; }
 .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 380px) { .top-row .logo { height: 30px; } .brand-name { font-size: 17px; letter-spacing: 0.02em; } .top-row { gap: 8px; } }
 .brand-sub { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; max-width: 100%; }
 .seg button { border: 0; background: transparent; border-radius: 999px; padding: 6px 11px; font-size: 14px; font-weight: 600; color: var(--muted); min-height: 34px; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
