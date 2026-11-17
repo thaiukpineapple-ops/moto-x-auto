@@ -40,7 +40,7 @@ en: {
   track_code: 'Booking code', track_phone: 'Phone number', track_sub2: 'Enter your booking code and the phone number you booked with.', tagline: 'Motorbike & car repair', role_customer: 'Customer', role_mechanic: 'Mechanic', role_desk: 'Front desk', role_owner: 'Owner', branch: 'Branch',
   sync_live: 'Live, synced', sync_connecting: 'Connecting…', sync_local: 'Saved on this device only', sync_stale: "Can't reach saved data yet", sync_error: 'Saved data unavailable',
   nav_book: 'Book', nav_track: 'Track', nav_myjobs: 'My jobs', nav_stock: 'Stock', nav_today: 'Today', nav_board: 'Jobs', nav_newjob: 'New job', nav_dash: 'Dashboard', nav_reports: 'Reports', nav_settings: 'Settings',
-  vt_bike: 'Motorbike', vt_car: 'Car', vtype: 'Vehicle type', brand: 'Brand', model: 'Model', model_ph_bike: 'e.g. Click 160, PCX, NMAX', model_ph_car: 'e.g. Yaris, Vios, D-Max',
+  vt_bike: 'Motorbike', vt_car: 'Car', vtype: 'Vehicle type', brand: 'Brand', model: 'Model', model_ph_bike: 'e.g. Click 160, PCX, NMAX', model_ph_car: 'e.g. C 200, X3, XC60',
   year: 'Year', vin: 'VIN (chassis no.)', mileage: 'Mileage (km)', plate: 'Number plate', plate_series: 'Letters', plate_number: 'Number', plate_province: 'Province', other: 'Other',
   book_title: 'Book a repair', book_sub: 'Three short steps. The shop confirms your time by LINE or phone.',
   sec_service: 'What do you need?', sec_vehicle: 'Your vehicle', sec_problem: "What's wrong?", sec_when: 'When?', sec_you: 'Your details',
@@ -161,7 +161,7 @@ th: {
   track_code: 'รหัสการจอง', track_phone: 'เบอร์โทรศัพท์', track_sub2: 'ใส่รหัสการจองและเบอร์โทรที่ใช้จอง', tagline: 'ซ่อมมอเตอร์ไซค์และรถยนต์', role_customer: 'ลูกค้า', role_mechanic: 'ช่าง', role_desk: 'หน้าร้าน', role_owner: 'เจ้าของ', branch: 'สาขา',
   sync_live: 'ออนไลน์ ซิงก์แล้ว', sync_connecting: 'กำลังเชื่อมต่อ…', sync_local: 'บันทึกในเครื่องนี้เท่านั้น', sync_stale: 'ยังโหลดข้อมูลไม่ได้', sync_error: 'โหลดข้อมูลไม่ได้',
   nav_book: 'จองคิว', nav_track: 'ติดตามงาน', nav_myjobs: 'งานของฉัน', nav_stock: 'สต็อก', nav_today: 'วันนี้', nav_board: 'งานซ่อม', nav_newjob: 'เปิดงาน', nav_dash: 'ภาพรวม', nav_reports: 'รายงาน', nav_settings: 'ตั้งค่า',
-  vt_bike: 'มอเตอร์ไซค์', vt_car: 'รถยนต์', vtype: 'ประเภทรถ', brand: 'ยี่ห้อ', model: 'รุ่น', model_ph_bike: 'เช่น Click 160, PCX, NMAX', model_ph_car: 'เช่น Yaris, Vios, D-Max',
+  vt_bike: 'มอเตอร์ไซค์', vt_car: 'รถยนต์', vtype: 'ประเภทรถ', brand: 'ยี่ห้อ', model: 'รุ่น', model_ph_bike: 'เช่น Click 160, PCX, NMAX', model_ph_car: 'เช่น C 200, X3, XC60',
   year: 'ปี', vin: 'เลขตัวถัง (VIN)', mileage: 'เลขไมล์ (กม.)', plate: 'ทะเบียนรถ', plate_series: 'หมวดอักษร', plate_number: 'เลขทะเบียน', plate_province: 'จังหวัด', other: 'อื่นๆ',
   book_title: 'จองคิวซ่อมรถ', book_sub: 'จองง่ายใน 3 ขั้นตอน ร้านจะยืนยันเวลาทาง LINE หรือโทรกลับ',
   sec_service: 'ต้องการบริการอะไร', sec_vehicle: 'รถของคุณ', sec_problem: 'อาการเป็นอย่างไร', sec_when: 'วันและเวลา', sec_you: 'ข้อมูลติดต่อ',
@@ -280,7 +280,7 @@ const SERVICES = [
   { key: 'oil', for: 'both' }, { key: 'service', for: 'both' }, { key: 'tyres', for: 'both' }, { key: 'brakes', for: 'both' }, { key: 'chain', for: 'bike' },
   { key: 'aircon', for: 'car' }, { key: 'electrical', for: 'both' }, { key: 'engine', for: 'both' }, { key: 'body', for: 'both' }, { key: 'other', for: 'both' }
 ];
-const BRANDS = { bike: ['Honda', 'Yamaha', 'Kawasaki', 'Suzuki', 'GPX', 'Vespa', 'other'], car: ['Toyota', 'Honda', 'Isuzu', 'Mitsubishi', 'Nissan', 'Mazda', 'Ford', 'MG', 'other'] };
+const BRANDS = { bike: ['Honda', 'Yamaha', 'Kawasaki', 'Suzuki', 'GPX', 'Vespa', 'other'], car: ['Mercedes-Benz', 'BMW', 'Volvo'] };
 const DVI = {
   bike: ['tyre_f', 'tyre_r', 'brake_f', 'brake_r', 'drive', 'oil', 'battery', 'lights', 'suspension', 'cables', 'leaks'],
   car: ['tyres', 'brakes', 'oil', 'coolant', 'battery', 'lights', 'wipers', 'suspension', 'belts', 'aircon', 'leaks']
