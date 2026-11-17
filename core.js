@@ -48,7 +48,7 @@ en: {
   name: 'Name', phone: 'Phone', line_id: 'LINE ID (optional)', from_price: 'from ฿{p}', quote_after: 'Price after check', slot_full: 'Full', slots_left: '{n} free',
   pick_day: 'Pick a day to see free times.', no_slots: 'No free times on this day.', submit_book: 'Book this time', need: 'Please add: {f}', day: 'day', time: 'time', service: 'service', service_lbl: 'Service',
   booked_title: "You're booked in", booked_sub: 'Keep this code. Use it to track your repair.', booking_code: 'Booking code', track_this: 'Track this repair', copy_details: 'Copy details', book_another: 'Book another vehicle', copied: 'Copied',
-  track_title: 'Track your repair', track_sub: 'Enter your booking code or phone number.', track_ph: 'MB-1234 or 081 234 5678', find: 'Find',
+  track_title: 'Track your repair', promise: 'Photos of every part we replace: the old part, the new one in its box, and the part fitted.', how_1: 'Follow your repair step by step', how_2: 'See photos of the old and new parts', how_3: 'Approve the price before work starts', track_sub: 'Enter your booking code or phone number.', track_ph: 'MB-1234 or 081 234 5678', find: 'Find',
   not_found: 'No repair found for "{q}". Check the code and try again.', your_repairs: 'Your repairs', booked_for: 'Booked for', shop_contact: 'Questions? Contact the shop', progress: 'Progress',
   st_booked: 'Booked', st_received: 'Received', st_inspection: 'Inspection', st_approval: 'Waiting for approval', st_approval_c: 'Waiting for your approval', st_approved: 'Approved',
   st_parts_wait: 'Waiting for parts', st_in_progress: 'In progress', st_parts_replaced: 'Parts replaced', st_qc: 'Quality check', st_ready: 'Ready for pickup', st_completed: 'Completed', st_cancelled: 'Cancelled',
@@ -169,7 +169,7 @@ th: {
   name: 'ชื่อ', phone: 'เบอร์โทร', line_id: 'LINE ID (ไม่บังคับ)', from_price: 'เริ่ม ฿{p}', quote_after: 'ประเมินราคาหลังตรวจ', slot_full: 'เต็ม', slots_left: 'ว่าง {n}',
   pick_day: 'เลือกวันก่อน แล้วจะเห็นเวลาที่ว่าง', no_slots: 'ไม่มีเวลาว่างในวันนี้', submit_book: 'ยืนยันการจอง', need: 'กรุณาเลือก/กรอก: {f}', day: 'วัน', time: 'เวลา', service: 'บริการ', service_lbl: 'บริการ',
   booked_title: 'จองคิวเรียบร้อย', booked_sub: 'เก็บรหัสนี้ไว้ ใช้ติดตามงานซ่อมของคุณ', booking_code: 'รหัสการจอง', track_this: 'ติดตามงานซ่อมนี้', copy_details: 'คัดลอกรายละเอียด', book_another: 'จองคิวรถคันอื่น', copied: 'คัดลอกแล้ว',
-  track_title: 'ติดตามงานซ่อม', track_sub: 'ใส่รหัสการจองหรือเบอร์โทรศัพท์', track_ph: 'MB-1234 หรือ 081 234 5678', find: 'ค้นหา',
+  track_title: 'ติดตามงานซ่อม', promise: 'เราถ่ายรูปอะไหล่ทุกชิ้นที่เปลี่ยน ทั้งชิ้นเก่า ชิ้นใหม่ในกล่อง และหลังติดตั้งเสร็จ', how_1: 'ติดตามงานซ่อมได้ทุกขั้นตอน', how_2: 'ดูรูปอะไหล่ชิ้นเก่าและชิ้นใหม่', how_3: 'อนุมัติราคาก่อนเริ่มซ่อม', track_sub: 'ใส่รหัสการจองหรือเบอร์โทรศัพท์', track_ph: 'MB-1234 หรือ 081 234 5678', find: 'ค้นหา',
   not_found: 'ไม่พบงานซ่อมสำหรับ "{q}" กรุณาตรวจสอบอีกครั้ง', your_repairs: 'งานซ่อมของคุณ', booked_for: 'นัดวันที่', shop_contact: 'สอบถามเพิ่มเติม ติดต่อร้าน', progress: 'ความคืบหน้า',
   st_booked: 'จองแล้ว', st_received: 'รับรถแล้ว', st_inspection: 'ตรวจเช็ค', st_approval: 'รออนุมัติ', st_approval_c: 'รอคุณอนุมัติ', st_approved: 'อนุมัติแล้ว',
   st_parts_wait: 'รออะไหล่', st_in_progress: 'กำลังซ่อม', st_parts_replaced: 'เปลี่ยนอะไหล่แล้ว', st_qc: 'ตรวจคุณภาพ', st_ready: 'พร้อมรับรถ', st_completed: 'เสร็จสมบูรณ์', st_cancelled: 'ยกเลิก',
@@ -930,16 +930,19 @@ function render() {
   document.documentElement.style.setProperty('--toph', document.getElementById('top').offsetHeight + 'px');
 }
 function renderTop() {
-  const s = D.settings, bs = branches();
+  const s = D.settings, bs = branches(), staffApp = S.appKind !== 'customer';
+  const acct = LIVE && staffApp ? (AUTH.user ? `<button class="btn sm ghost" data-act="signout">${ic('logout', 'sm')}${esc(isStaff() ? (AUTH.profile.name || t('sign_out')) : t('sign_out'))}</button>` : (S.view === 'signin' ? '' : `<button class="btn sm ghost" data-act="go" data-v="signin">${ic('lock', 'sm')}${esc(t('staff_btn'))}</button>`)) : '';
+  const inst = canInstall() ? `<button class="btn sm ghost" data-act="install">${ic('download', 'sm')}${esc(t('install_btn'))}</button>` : '';
+  const branch = bs.length > 1 && S.role !== 'customer' ? `<label class="note" for="f-branch">${esc(t('branch'))} <select id="f-branch" data-act="branch">${bs.map(b => `<option${b === curBranch() ? ' selected' : ''}>${esc(b)}</option>`).join('')}</select></label>` : '';
+  // customers only see the connection line when something is wrong
+  const showSync = staffApp || D.sync !== 'live';
+  const meta = showSync || inst || acct || branch ? `<div class="meta-row">${showSync ? `<span class="sync ${D.sync}"><i></i>${esc(t('sync_' + D.sync))}</span>` : '<span></span>'}<span class="row" style="gap:6px">${inst}${acct}${branch}</span></div>` : '';
   document.getElementById('top').innerHTML =
-    `<div class="top-row"><div class="brand-wrap">${logoHtml()}<div class="brand"><div class="brand-name">${esc(s.name || DEFAULTS.name)}</div><div class="brand-sub">${S.appKind !== 'customer' ? `<span class="appbadge">${esc(t('badge_' + S.appKind))}</span>` : ''}${esc(s.address || t('tagline'))}</div></div></div>
+    `<div class="top-row"><div class="brand-wrap">${logoHtml()}<div class="brand"><div class="brand-name">${esc(s.name || DEFAULTS.name)}</div><div class="brand-sub">${staffApp ? `<span class="appbadge">${esc(t('badge_' + S.appKind))}</span>` : ''}${esc(s.address || t('tagline'))}</div></div></div>
     <div class="seg" role="group" aria-label="Language"><button data-act="lang" data-v="th" aria-pressed="${lang === 'th'}">TH</button><button data-act="lang" data-v="en" aria-pressed="${lang === 'en'}">EN</button></div></div>
     ${KIND === 'all' ? `<div class="roles apps"><div class="seg" role="group" aria-label="App">${['customer', 'worker', 'owner'].map(k => `<button data-act="appkind" data-v="${k}" aria-pressed="${S.appKind === k}">${ic(k === 'customer' ? 'user' : k === 'worker' ? 'wrench' : 'crown')}${esc(t('app_' + k))}</button>`).join('')}</div></div>` : ''}
     ${allowedRoles().length > 1 && S.view !== 'signin' ? `<div class="roles"><div class="seg" role="group" aria-label="Role">${allowedRoles().map(r => `<button data-act="role" data-v="${r}" aria-pressed="${S.role === r}">${ic(ROLE_IC[r])}${esc(t('role_' + r))}</button>`).join('')}</div></div>` : ''}
-    <div class="meta-row"><span class="sync ${D.sync}"><i></i>${esc(t('sync_' + D.sync))}</span><span class="row" style="gap:6px">
-    ${canInstall() ? `<button class="btn sm ghost" data-act="install">${ic('download', 'sm')}${esc(t('install_btn'))}</button>` : ''}
-    ${LIVE && S.appKind !== 'customer' ? (AUTH.user ? `<button class="btn sm ghost" data-act="signout">${ic('logout', 'sm')}${esc(isStaff() ? (AUTH.profile.name || t('sign_out')) : t('sign_out'))}</button>` : (S.view === 'signin' ? '' : `<button class="btn sm ghost" data-act="go" data-v="signin">${ic('lock', 'sm')}${esc(t('staff_btn'))}</button>`)) : ''}
-    ${bs.length > 1 && S.role !== 'customer' ? `<label class="note" for="f-branch">${esc(t('branch'))} <select id="f-branch" data-act="branch">${bs.map(b => `<option${b === curBranch() ? ' selected' : ''}>${esc(b)}</option>`).join('')}</select></label>` : ''}</span></div>${installBarHtml()}`;
+    ${meta}${installBarHtml()}`;
 }
 function renderNav() {
   if (S.view === 'signin') { document.getElementById('nav').innerHTML = ''; return; }
@@ -1234,6 +1237,7 @@ function viewBook() {
   const dayChip = d => { const dt = parseYmd(d); return `<button type="button" class="chip" data-act="pick" data-k="form.date" data-v="${d}" aria-pressed="${f.date === d}">${esc(d === today() ? t('today') : d === addDays(today(), 1) ? t('tomorrow') : new Intl.DateTimeFormat(loc(), { weekday: 'short' }).format(dt))}<small>${esc(new Intl.DateTimeFormat(loc(), { day: 'numeric', month: 'short' }).format(dt))}</small></button>`; };
   return `<form class="view" data-form="book" novalidate>
     <div class="intro"><h1>${esc(t('book_title'))}</h1><p class="sub">${esc(t('book_sub'))}</p></div>${roBanner()}
+    <p class="promise"><span class="ibox">${ic('camera')}</span><span>${esc(t('promise'))}</span></p>
     <section class="section"><div class="section-head"><h2>${esc(t('sec_vehicle'))}</h2><span class="num">01</span></div>${vehicleFields('form', f, false)}</section>
     <section class="section"><div class="section-head"><h2>${esc(t('sec_service'))}</h2><span class="num">02</span></div>${serviceChips('form', f)}</section>
     <section class="section"><div class="section-head"><h2>${esc(t('sec_problem'))}</h2><span class="num">03</span></div>
@@ -1262,20 +1266,23 @@ function findJobs(q) {
     return dg.length >= 9 && digits(j.customer.phone).slice(-9) === dg.slice(-9);
   }).sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt))).slice(0, 10);
 }
+function trackHowto() {
+  return `<div class="card howto"><ul>${[['timer', 'how_1'], ['camera', 'how_2'], ['check', 'how_3']].map(([i, k]) => `<li><span class="ibox">${ic(i)}</span><span>${esc(t(k))}</span></li>`).join('')}</ul></div>`;
+}
 function viewTrackLive() {
   const jobs = S.trackJobs, pick = jobs.find(j => j.id === S.trackPick) || jobs[0];
   const others = jobs.filter(j => pick && j.id !== pick.id && ACTIVE.indexOf(j.status) >= 0);
   return `<div class="view"><div class="intro"><h1>${esc(t('track_title'))}</h1><p class="sub">${esc(t('track_sub2'))}</p></div>
     <form class="card" data-form="track"><div class="grid2">${inp('trackCode', S.trackCode, t('track_code'), { ph: 'MB-1234', ac: 'off' })}${inp('trackPhone', S.trackPhone, t('track_phone'), { type: 'tel', mode: 'tel', ph: '081 234 5678', ac: 'tel' })}</div>
-    <button class="btn dark" type="submit">${ic('search')}${esc(t('find'))}</button></form>
+    <button class="btn primary" type="submit">${ic('search')}${esc(t('find'))}</button></form>
     ${S.trackErr ? `<p class="err" role="alert">${esc(S.trackErr)}</p>` : ''}
-    ${pick ? trackDetail(pick) : ''}
+    ${pick ? trackDetail(pick) : S.trackErr ? '' : trackHowto()}
     ${others.length ? `<h2>${esc(t('your_repairs'))}</h2><div class="tags">${others.map(j => tagCard(j, { cust: true, act: 'trackpick', compact: true })).join('')}</div>` : ''}</div>`;
 }
 function viewTrack() {
   if (custLive()) return viewTrackLive();
   const res = S.trackDone ? findJobs(S.trackDone) : null;
-  let body = '';
+  let body = res ? '' : trackHowto();
   if (res && !res.length) body = `<p class="err" role="alert">${esc(t('not_found', { q: S.trackDone }))}</p>`;
   else if (res && res.length === 1) body = trackDetail(res[0]);
   else if (res) {
@@ -1284,7 +1291,7 @@ function viewTrack() {
       : `<h2>${esc(t('your_repairs'))}</h2><div class="tags">${res.map(j => tagCard(j, { cust: true, act: 'trackpick' })).join('')}</div>`;
   }
   return `<div class="view"><div class="intro"><h1>${esc(t('track_title'))}</h1><p class="sub">${esc(t('track_sub'))}</p></div>
-    <form class="row" data-form="track"><label class="sr" for="f-trackQ">${esc(t('track_title'))}</label><input class="input" style="flex:1;min-width:0" id="f-trackQ" data-bind="trackQ" value="${esc(S.trackQ)}" placeholder="${esc(t('track_ph'))}" autocomplete="off"><button class="btn dark" type="submit">${ic('search')}${esc(t('find'))}</button></form>${body}</div>`;
+    <form class="row" data-form="track"><label class="sr" for="f-trackQ">${esc(t('track_title'))}</label><input class="input" style="flex:1;min-width:0" id="f-trackQ" data-bind="trackQ" value="${esc(S.trackQ)}" placeholder="${esc(t('track_ph'))}" autocomplete="off"><button class="btn primary" type="submit">${ic('search')}${esc(t('find'))}</button></form>${body}</div>`;
 }
 function newCount(j) {
   if (S.seenFor === j.id) return S.seenCount;
