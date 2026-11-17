@@ -42,13 +42,13 @@ en: {
   nav_book: 'Book', nav_track: 'Track', nav_myjobs: 'My jobs', nav_stock: 'Stock', nav_today: 'Today', nav_board: 'Jobs', nav_newjob: 'New job', nav_dash: 'Dashboard', nav_reports: 'Reports', nav_settings: 'Settings',
   vt_bike: 'Motorbike', vt_car: 'Car', vtype: 'Vehicle type', brand: 'Brand', model: 'Model', model_ph_bike: 'e.g. Click 160, PCX, NMAX', model_ph_car: 'e.g. Yaris, Vios, D-Max',
   year: 'Year', vin: 'VIN (chassis no.)', mileage: 'Mileage (km)', plate: 'Number plate', plate_series: 'Letters', plate_number: 'Number', plate_province: 'Province', other: 'Other',
-  book_title: 'Book a repair', book_sub: 'Pick a service and a time. The shop confirms by LINE or phone.',
+  book_title: 'Book a repair', book_sub: 'Three short steps. The shop confirms your time by LINE or phone.',
   sec_service: 'What do you need?', sec_vehicle: 'Your vehicle', sec_problem: "What's wrong?", sec_when: 'When?', sec_you: 'Your details',
   problem_ph: 'e.g. Brakes squeak, hard to start in the morning', add_photo: 'Add a photo', change_photo: 'Change photo', remove: 'Remove',
   name: 'Name', phone: 'Phone', line_id: 'LINE ID (optional)', from_price: 'from ฿{p}', quote_after: 'Price after check', slot_full: 'Full', slots_left: '{n} free',
   pick_day: 'Pick a day to see free times.', no_slots: 'No free times on this day.', submit_book: 'Book this time', need: 'Please add: {f}', day: 'day', time: 'time', service: 'service', service_lbl: 'Service',
   booked_title: "You're booked in", booked_sub: 'Keep this code. Use it to track your repair.', booking_code: 'Booking code', track_this: 'Track this repair', copy_details: 'Copy details', book_another: 'Book another vehicle', copied: 'Copied',
-  track_title: 'Track your repair', promise: 'Photos of every part we replace: the old part, the new one in its box, and the part fitted.', how_1: 'Follow your repair step by step', how_2: 'See photos of the old and new parts', how_3: 'Approve the price before work starts', track_sub: 'Enter your booking code or phone number.', track_ph: 'MB-1234 or 081 234 5678', find: 'Find',
+  track_title: 'Track your repair', trust_title: 'Parts you can trust', st_vehicle: 'Vehicle', st_service: 'Service', st_when: 'Appointment', step_of: 'Step {n} of 3', h_vehicle: 'Tell us about your vehicle', hint_vehicle: 'So we can get ready before you arrive.', h_service: 'What can we help with?', hint_service: 'Choose one or more. Prices are starting prices.', h_when: 'Choose a day and time', hint_when: 'This is a request. The shop confirms by LINE or phone.', select_brand: 'Select brand', plate_hint: 'Type it as it is on your plate.', problem_opt: 'Describe the problem (optional)', add_photos: 'Add photos', photos_hint: 'Optional, up to 4 photos. They help the mechanic see the problem.', pick_date: 'Day', pick_time: 'Time', summary: 'Booking summary', sum_services: 'Services', sum_contact: 'Contact', continue: 'Continue', sending: 'Sending…', promise: 'Photos of every part we replace: the old part, the new one in its box, and the part fitted.', how_1: 'Follow your repair step by step', how_2: 'See photos of the old and new parts', how_3: 'Approve the price before work starts', track_sub: 'Enter your booking code or phone number.', track_ph: 'MB-1234 or 081 234 5678', find: 'Find',
   not_found: 'No repair found for "{q}". Check the code and try again.', your_repairs: 'Your repairs', booked_for: 'Booked for', shop_contact: 'Questions? Contact the shop', progress: 'Progress',
   st_booked: 'Booked', st_received: 'Received', st_inspection: 'Inspection', st_approval: 'Waiting for approval', st_approval_c: 'Waiting for your approval', st_approved: 'Approved',
   st_parts_wait: 'Waiting for parts', st_in_progress: 'In progress', st_parts_replaced: 'Parts replaced', st_qc: 'Quality check', st_ready: 'Ready for pickup', st_completed: 'Completed', st_cancelled: 'Cancelled',
@@ -163,13 +163,13 @@ th: {
   nav_book: 'จองคิว', nav_track: 'ติดตามงาน', nav_myjobs: 'งานของฉัน', nav_stock: 'สต็อก', nav_today: 'วันนี้', nav_board: 'งานซ่อม', nav_newjob: 'เปิดงาน', nav_dash: 'ภาพรวม', nav_reports: 'รายงาน', nav_settings: 'ตั้งค่า',
   vt_bike: 'มอเตอร์ไซค์', vt_car: 'รถยนต์', vtype: 'ประเภทรถ', brand: 'ยี่ห้อ', model: 'รุ่น', model_ph_bike: 'เช่น Click 160, PCX, NMAX', model_ph_car: 'เช่น Yaris, Vios, D-Max',
   year: 'ปี', vin: 'เลขตัวถัง (VIN)', mileage: 'เลขไมล์ (กม.)', plate: 'ทะเบียนรถ', plate_series: 'หมวดอักษร', plate_number: 'เลขทะเบียน', plate_province: 'จังหวัด', other: 'อื่นๆ',
-  book_title: 'จองคิวซ่อมรถ', book_sub: 'เลือกบริการและเวลา ร้านจะยืนยันทาง LINE หรือโทรกลับ',
+  book_title: 'จองคิวซ่อมรถ', book_sub: 'จองง่ายใน 3 ขั้นตอน ร้านจะยืนยันเวลาทาง LINE หรือโทรกลับ',
   sec_service: 'ต้องการบริการอะไร', sec_vehicle: 'รถของคุณ', sec_problem: 'อาการเป็นอย่างไร', sec_when: 'วันและเวลา', sec_you: 'ข้อมูลติดต่อ',
   problem_ph: 'เช่น เบรกมีเสียงดัง สตาร์ทติดยากตอนเช้า', add_photo: 'แนบรูป', change_photo: 'เปลี่ยนรูป', remove: 'ลบ',
   name: 'ชื่อ', phone: 'เบอร์โทร', line_id: 'LINE ID (ไม่บังคับ)', from_price: 'เริ่ม ฿{p}', quote_after: 'ประเมินราคาหลังตรวจ', slot_full: 'เต็ม', slots_left: 'ว่าง {n}',
   pick_day: 'เลือกวันก่อน แล้วจะเห็นเวลาที่ว่าง', no_slots: 'ไม่มีเวลาว่างในวันนี้', submit_book: 'ยืนยันการจอง', need: 'กรุณาเลือก/กรอก: {f}', day: 'วัน', time: 'เวลา', service: 'บริการ', service_lbl: 'บริการ',
   booked_title: 'จองคิวเรียบร้อย', booked_sub: 'เก็บรหัสนี้ไว้ ใช้ติดตามงานซ่อมของคุณ', booking_code: 'รหัสการจอง', track_this: 'ติดตามงานซ่อมนี้', copy_details: 'คัดลอกรายละเอียด', book_another: 'จองคิวรถคันอื่น', copied: 'คัดลอกแล้ว',
-  track_title: 'ติดตามงานซ่อม', promise: 'เราถ่ายรูปอะไหล่ทุกชิ้นที่เปลี่ยน ทั้งชิ้นเก่า ชิ้นใหม่ในกล่อง และหลังติดตั้งเสร็จ', how_1: 'ติดตามงานซ่อมได้ทุกขั้นตอน', how_2: 'ดูรูปอะไหล่ชิ้นเก่าและชิ้นใหม่', how_3: 'อนุมัติราคาก่อนเริ่มซ่อม', track_sub: 'ใส่รหัสการจองหรือเบอร์โทรศัพท์', track_ph: 'MB-1234 หรือ 081 234 5678', find: 'ค้นหา',
+  track_title: 'ติดตามงานซ่อม', trust_title: 'อะไหล่ที่คุณมั่นใจได้', st_vehicle: 'รถ', st_service: 'บริการ', st_when: 'นัดหมาย', step_of: 'ขั้นตอนที่ {n} จาก 3', h_vehicle: 'ข้อมูลรถของคุณ', hint_vehicle: 'เพื่อให้ร้านเตรียมพร้อมก่อนคุณมาถึง', h_service: 'ให้เราช่วยเรื่องอะไร', hint_service: 'เลือกได้มากกว่า 1 อย่าง ราคาที่แสดงเป็นราคาเริ่มต้น', h_when: 'เลือกวันและเวลา', hint_when: 'นี่คือคำขอจอง ร้านจะยืนยันทาง LINE หรือโทรกลับ', select_brand: 'เลือกยี่ห้อ', plate_hint: 'กรอกตามที่เขียนบนป้ายทะเบียน', problem_opt: 'อธิบายอาการ (ไม่บังคับ)', add_photos: 'เพิ่มรูป', photos_hint: 'ไม่บังคับ สูงสุด 4 รูป ช่วยให้ช่างเห็นอาการได้ชัดขึ้น', pick_date: 'วัน', pick_time: 'เวลา', summary: 'สรุปการจอง', sum_services: 'บริการ', sum_contact: 'ติดต่อ', continue: 'ถัดไป', sending: 'กำลังส่ง…', promise: 'เราถ่ายรูปอะไหล่ทุกชิ้นที่เปลี่ยน ทั้งชิ้นเก่า ชิ้นใหม่ในกล่อง และหลังติดตั้งเสร็จ', how_1: 'ติดตามงานซ่อมได้ทุกขั้นตอน', how_2: 'ดูรูปอะไหล่ชิ้นเก่าและชิ้นใหม่', how_3: 'อนุมัติราคาก่อนเริ่มซ่อม', track_sub: 'ใส่รหัสการจองหรือเบอร์โทรศัพท์', track_ph: 'MB-1234 หรือ 081 234 5678', find: 'ค้นหา',
   not_found: 'ไม่พบงานซ่อมสำหรับ "{q}" กรุณาตรวจสอบอีกครั้ง', your_repairs: 'งานซ่อมของคุณ', booked_for: 'นัดวันที่', shop_contact: 'สอบถามเพิ่มเติม ติดต่อร้าน', progress: 'ความคืบหน้า',
   st_booked: 'จองแล้ว', st_received: 'รับรถแล้ว', st_inspection: 'ตรวจเช็ค', st_approval: 'รออนุมัติ', st_approval_c: 'รอคุณอนุมัติ', st_approved: 'อนุมัติแล้ว',
   st_parts_wait: 'รออะไหล่', st_in_progress: 'กำลังซ่อม', st_parts_replaced: 'เปลี่ยนอะไหล่แล้ว', st_qc: 'ตรวจคุณภาพ', st_ready: 'พร้อมรับรถ', st_completed: 'เสร็จสมบูรณ์', st_cancelled: 'ยกเลิก',
@@ -305,12 +305,12 @@ const CAN = { customer: [], mechanic: STAFF, desk: DESK, owner: DESK.concat(['co
 const D = { jobs: new Map(), parts: new Map(), moves: new Map(), expenses: new Map(), photos: new Map(), settings: clone(DEFAULTS), sync: 'connecting', db: null, readonly: false };
 const S = {
   role: 'customer', view: 'book', id: null, tab: '', me: '', branch: '',
-  form: blankForm(), walk: blankWalk(), bookedId: null, err: '', trackQ: '', trackDone: '', trackPick: null, est: {},
+  form: blankForm(), bookStep: 0, walk: blankWalk(), bookedId: null, err: '', trackQ: '', trackDone: '', trackPick: null, est: {},
   boardMode: 'board', q: '', stockQ: '', stockF: 'all', period: 'today', apptDay: '', line: blankLine(), lineQ: '', note: '', notePhoto: null,
   chatText: '', taskText: '', dviNotes: {}, setDraft: null, partDraft: null, recv: { qty: '', cost: '' }, cnt: '', fit: null, pay: { method: 'cash', amount: '' },
   discPct: '', exp: { cat: 'rent', amount: '', note: '' }, lastCust: '', lastStaff: {}
 };
-function blankForm() { return { vtype: 'bike', service: '', brand: '', model: '', year: '', vin: '', mileage: '', series: '', number: '', province: 'กรุงเทพมหานคร', problem: '', photo: null, date: '', time: '', name: '', phone: '', line: '' }; }
+function blankForm() { return { vtype: 'bike', service: '', brand: '', model: '', year: '', vin: '', mileage: '', series: '', number: '', province: 'กรุงเทพมหานคร', problem: '', photo: null, photos: [], services: [], date: '', time: '', name: '', phone: '', line: '' }; }
 function blankWalk() { const f = blankForm(); f.mechanic = ''; f.now = true; return f; }
 function blankLine() { return { kind: 'labour', desc: '', qty: '1', price: '' }; }
 function clone(o) { return o == null ? o : JSON.parse(JSON.stringify(o)); }
@@ -358,6 +358,7 @@ const inBranch = o => (o.loc || branches()[0]) === curBranch() || (branches().in
 const jobsHere = () => Array.from(D.jobs.values()).filter(inBranch);
 const partsHere = () => Array.from(D.parts.values()).filter(inBranch);
 const svcName = k => t('sv_' + k);
+const svcList = j => ((Array.isArray(j.services) && j.services.length) ? j.services : [j.service]).filter(Boolean).map(svcName).join(', ');
 const stLabel = (s, cust) => cust && s === 'approval' ? t('st_approval_c') : t('st_' + s);
 function vName(v) { if (!v) return ''; const b = v.brand === 'other' ? '' : (v.brand || ''); return (b + ' ' + (v.model || '')).trim() || t('other'); }
 const plateText = v => v && (v.series || v.number) ? [v.series, v.number, v.province].filter(Boolean).join(' ') : '';
@@ -1016,7 +1017,7 @@ function tagCard(j, o) {
   return `<button class="tag st-${j.status}${o.compact ? ' compact' : ''}" data-act="${o.act || 'open'}" data-v="${esc(j.id)}">
     <span class="tag-hole" aria-hidden="true"></span>
     <span class="tag-top"><span class="ref">${esc(j.ref)}</span><span class="when">${esc(when)}</span>${pill(j.status, o.cust)}</span>
-    <span class="tag-mid">${plate(j.vehicle)}<span class="vname"><b>${esc(vName(j.vehicle))}</b><small>${esc(svcName(j.service))}</small></span></span>
+    <span class="tag-mid">${plate(j.vehicle)}<span class="vname"><b>${esc(vName(j.vehicle))}</b><small>${esc(svcList(j))}</small></span></span>
     ${o.cust ? '' : `<span class="tag-bot"><span>${esc(j.customer.name)}</span>${j.mechanic ? `<span>· ${esc(j.mechanic)}</span>` : ''}${flags.join('')}${tt.total && S.role !== 'mechanic' ? `<span class="amt">${baht(tt.total)}</span>` : ''}</span>`}
   </button>`;
 }
@@ -1203,9 +1204,9 @@ function viewShop() {
     <button class="btn primary block" data-act="go" data-v="book">${ic('calendar')}${esc(t('book_now'))}</button>
     <p class="note" style="text-align:center"><a href="${esc(privacyUrl())}" target="_blank" rel="noopener">${esc(t('privacy'))}</a></p></div>`;
 }
-function openDays() {
-  const out = [], s = D.settings;
-  for (let i = 0; i < 21 && out.length < 7; i++) {
+function openDays(n) {
+  const out = [], s = D.settings, want = n || 7;
+  for (let i = 0; i < 21 && out.length < want; i++) {
     const day = addDays(today(), i);
     if (Number(s.closedDay) >= 0 && parseYmd(day).getDay() === Number(s.closedDay)) continue;
     if (!slotsFor(day).length) continue;
@@ -1219,39 +1220,91 @@ function slotsFor(day) {
   return out;
 }
 const slotUsed = (day, time) => custLive() ? (((S.slotCounts[day] && typeof S.slotCounts[day] === 'object') ? S.slotCounts[day][time] : 0) || 0) : jobsHere().filter(j => j.date === day && j.time === time && j.status !== 'cancelled' && j.source !== 'walkin').length;
+/* ---------- customer booking: 3 steps (vehicle, service, appointment) ---------- */
+const BOOK_STEPS = ['st_vehicle', 'st_service', 'st_when'];
+function bookStepErr(step, f) {
+  const miss = [];
+  if (step === 0 && !f.brand && !f.model.trim()) miss.push(t('brand'));
+  if (step === 1 && !(f.services || []).length) miss.push(t('service'));
+  if (step === 2) {
+    if (!f.date) miss.push(t('day'));
+    if (!f.time) miss.push(t('time'));
+    if (!f.name.trim()) miss.push(t('name'));
+    if (digits(f.phone).length < 9) miss.push(t('phone'));
+  }
+  return miss.length ? t('need', { f: miss.join(', ') }) : '';
+}
+function bookVehicle(f) {
+  const car = f.vtype === 'car', o = 'form';
+  const typeCard = (v, icon, label) => `<button type="button" class="type-card" data-act="pick" data-k="form.vtype" data-v="${v}" aria-pressed="${(f.vtype === 'car') === (v === 'car')}"><span class="ibox">${ic(icon)}</span><b>${esc(t(label))}</b><span class="tick" aria-hidden="true">${ic('check', 'sm')}</span></button>`;
+  const brands = BRANDS[car ? 'car' : 'bike'];
+  return `<div class="type-cards" role="group" aria-label="${esc(t('vtype'))}">${typeCard('bike', 'scooter', 'vt_bike')}${typeCard('car', 'car', 'vt_car')}</div>
+    <div class="grid2"><div class="field"><label for="f-form-brand">${esc(t('brand'))}</label><select class="input" id="f-form-brand" data-bind="form.brand"><option value="">${esc(t('select_brand'))}</option>${brands.map(b => `<option value="${b}"${f.brand === b ? ' selected' : ''}>${esc(b === 'other' ? t('other') : b)}</option>`).join('')}</select></div>${inp(o + '.model', f.model, t('model'), { ph: t(car ? 'model_ph_car' : 'model_ph_bike') })}</div>
+    <div class="grid2">${inp(o + '.year', f.year, t('year'), { mode: 'numeric', ph: '2020' })}${car ? inp(o + '.vin', f.vin, t('vin'), { ph: 'MR2…' }) : ''}</div>
+    <div class="field"><span class="lbl">${esc(t('plate'))}</span><span class="note">${esc(t('plate_hint'))}</span>
+      <div class="plate-edit${car ? ' car' : ''}">
+        <div class="pe-top"><label class="sr" for="f-form-series">${esc(t('plate_series'))}</label><input class="pe-in pe-series" id="f-form-series" data-bind="form.series" value="${esc(f.series)}" placeholder="1กข" maxlength="4" autocomplete="off">
+        <label class="sr" for="f-form-number">${esc(t('plate_number'))}</label><input class="pe-in pe-number" id="f-form-number" data-bind="form.number" value="${esc(f.number)}" placeholder="1234" inputmode="numeric" maxlength="4" autocomplete="off"></div>
+        <label class="sr" for="f-form-province">${esc(t('plate_province'))}</label><input class="pe-in pe-prov" id="f-form-province" data-bind="form.province" value="${esc(f.province)}" list="provinces" placeholder="${esc(t('plate_province'))}" autocomplete="off">
+      </div><datalist id="provinces">${PROVINCES.map(x => `<option value="${x}">`).join('')}</datalist></div>`;
+}
+function bookService(f) {
+  const sel = f.services || [];
+  const cards = SERVICES.filter(x => x.for === 'both' || x.for === f.vtype).map(x => {
+    const pr = priceFor(x.key, f.vtype), on = sel.indexOf(x.key) >= 0;
+    return `<button type="button" class="svc-card" data-act="svctoggle" data-v="${x.key}" aria-pressed="${on}"><span class="ibox">${ic(SVC_IC[x.key])}</span><b>${esc(svcName(x.key))}</b><small>${esc(pr > 0 ? t('from_price', { p: pr.toLocaleString('en-US') }) : t('quote_after'))}</small><span class="tick" aria-hidden="true">${ic('check', 'sm')}</span></button>`;
+  }).join('');
+  const photos = (f.photos || []).map((u, i) => `<span class="pthumb"><img alt="" src="${esc(u)}"><button type="button" class="pthumb-x" data-act="rmphoto" data-v="${i}" aria-label="${esc(t('remove'))}">${ic('x', 'sm')}</button></span>`).join('');
+  return `<div class="svc-cards">${cards}</div>
+    <div class="field"><label for="f-form-problem">${esc(t('problem_opt'))}</label><textarea class="input" id="f-form-problem" data-bind="form.problem" placeholder="${esc(t('problem_ph'))}">${esc(f.problem)}</textarea></div>
+    <div class="field"><span class="lbl">${esc(t('add_photos'))}</span><div class="pthumbs">${photos}${(f.photos || []).length < 4 ? `<label class="padd" for="f-form-photos">${ic('camera')}<span>${esc(t('add_photos'))}</span></label><input class="sr" type="file" accept="image/*" multiple id="f-form-photos" data-photo-target="form.photos+">` : ''}</div><span class="note">${esc(t('photos_hint'))}</span></div>`;
+}
+function bookWhen(f, days, cap) {
+  const dayBtn = d => { const dt = parseYmd(d); return `<button type="button" class="date-btn" data-act="pick" data-k="form.date" data-v="${d}" aria-pressed="${f.date === d}"><small>${esc(d === today() ? t('today') : d === addDays(today(), 1) ? t('tomorrow') : new Intl.DateTimeFormat(loc(), { weekday: 'short' }).format(dt))}</small><b>${dt.getDate()}</b><small>${esc(new Intl.DateTimeFormat(loc(), { month: 'short' }).format(dt))}</small></button>`; };
+  let times = `<p class="note">${esc(t('pick_day'))}</p>`;
+  if (f.date) {
+    const sl = slotsFor(f.date);
+    times = sl.length ? '<div class="time-grid">' + sl.map(tm => {
+      const full = cap - slotUsed(f.date, tm) <= 0;
+      if (full && f.time === tm) f.time = '';
+      return `<button type="button" class="time-btn" data-act="pick" data-k="form.time" data-v="${tm}" aria-pressed="${f.time === tm}"${full ? ' disabled' : ''}>${tm}${full ? `<small>${esc(t('slot_full'))}</small>` : ''}</button>`;
+    }).join('') + '</div>' : `<p class="note">${esc(t('no_slots'))}</p>`;
+  }
+  return `<div class="field"><span class="lbl">${esc(t('pick_date'))}</span><div class="date-grid">${days.map(dayBtn).join('')}</div></div>
+    <div class="field"><span class="lbl">${esc(t('pick_time'))}</span>${times}</div>
+    <div class="grid2">${inp('form.name', f.name, t('name'), { ac: 'name' })}${inp('form.phone', f.phone, t('phone'), { type: 'tel', mode: 'tel', ac: 'tel', ph: '081 234 5678' })}</div>${inp('form.line', f.line, t('line_id'))}
+    <div class="summary"><h3>${esc(t('summary'))}</h3><dl class="dl">
+      <dt>${esc(t('st_vehicle'))}</dt><dd>${esc([t(f.vtype === 'car' ? 'vt_car' : 'vt_bike'), f.brand === 'other' ? t('other') : f.brand, f.model.trim(), f.year.trim()].filter(Boolean).join(' · '))}${(f.series || f.number) ? ' ' + plate(vehicleFrom(f)) : ''}</dd>
+      <dt>${esc(t('sum_services'))}</dt><dd>${esc((f.services || []).map(svcName).join(', ') || '–')}</dd>
+      <dt>${esc(t('st_when'))}</dt><dd>${esc(f.date ? fmtDay(f.date) + (f.time ? ' ' + f.time : '') : '–')}</dd>
+      <dt>${esc(t('sum_contact'))}</dt><dd>${esc([f.name.trim(), f.phone.trim()].filter(Boolean).join(' · ') || '–')}</dd></dl></div>
+    <p class="note" style="text-align:center">${t('book_privacy', { p: `<a href="${esc(privacyUrl())}" target="_blank" rel="noopener">${esc(t('privacy'))}</a>` })}</p>`;
+}
 function viewBook() {
   if (custLive() && S.booked) return viewBooked(S.booked);
   if (!custLive() && S.bookedId && D.jobs.get(S.bookedId)) return viewBooked(D.jobs.get(S.bookedId));
   if (custLive() && S.form.date && S.slotCounts[S.form.date] === undefined) fetchSlots(S.form.date);
-  const f = S.form, days = openDays(), cap = Math.max(1, Number(D.settings.perSlot) || 1);
+  const f = S.form, days = openDays(8), cap = Math.max(1, Number(D.settings.perSlot) || 1);
   if (f.date && days.indexOf(f.date) < 0) { f.date = ''; f.time = ''; }
-  let slots = `<p class="note">${esc(t('pick_day'))}</p>`;
-  if (f.date) {
-    const sl = slotsFor(f.date);
-    slots = sl.length ? '<div class="slots">' + sl.map(tm => {
-      const left = cap - slotUsed(f.date, tm), full = left <= 0;
-      if (full && f.time === tm) f.time = '';
-      return `<button type="button" class="chip" data-act="pick" data-k="form.time" data-v="${tm}" aria-pressed="${f.time === tm}"${full ? ' disabled' : ''}>${tm}<small>${esc(full ? t('slot_full') : t('slots_left', { n: left }))}</small></button>`;
-    }).join('') + '</div>' : `<p class="note">${esc(t('no_slots'))}</p>`;
-  }
-  const dayChip = d => { const dt = parseYmd(d); return `<button type="button" class="chip" data-act="pick" data-k="form.date" data-v="${d}" aria-pressed="${f.date === d}">${esc(d === today() ? t('today') : d === addDays(today(), 1) ? t('tomorrow') : new Intl.DateTimeFormat(loc(), { weekday: 'short' }).format(dt))}<small>${esc(new Intl.DateTimeFormat(loc(), { day: 'numeric', month: 'short' }).format(dt))}</small></button>`; };
-  return `<form class="view" data-form="book" novalidate>
+  const step = Math.max(0, Math.min(2, S.bookStep || 0));
+  const panels = [() => bookVehicle(f), () => bookService(f), () => bookWhen(f, days, cap)];
+  const heads = [['h_vehicle', 'hint_vehicle'], ['h_service', 'hint_service'], ['h_when', 'hint_when']];
+  return `<form class="view book-flow" data-form="book" novalidate>
     <div class="intro"><h1>${esc(t('book_title'))}</h1><p class="sub">${esc(t('book_sub'))}</p></div>${roBanner()}
-    <p class="promise"><span class="ibox">${ic('camera')}</span><span>${esc(t('promise'))}</span></p>
-    <section class="section"><div class="section-head"><h2>${esc(t('sec_vehicle'))}</h2><span class="num">01</span></div>${vehicleFields('form', f, false)}</section>
-    <section class="section"><div class="section-head"><h2>${esc(t('sec_service'))}</h2><span class="num">02</span></div>${serviceChips('form', f)}</section>
-    <section class="section"><div class="section-head"><h2>${esc(t('sec_problem'))}</h2><span class="num">03</span></div>
-      <label class="sr" for="f-form-problem">${esc(t('sec_problem'))}</label><textarea class="input" id="f-form-problem" data-bind="form.problem" placeholder="${esc(t('problem_ph'))}">${esc(f.problem)}</textarea>${photoPicker('form.photo', f.photo)}</section>
-    <section class="section"><div class="section-head"><h2>${esc(t('sec_when'))}</h2><span class="num">04</span></div><div class="hscroll days">${days.map(dayChip).join('')}</div>${slots}</section>
-    <section class="section"><div class="section-head"><h2>${esc(t('sec_you'))}</h2><span class="num">05</span></div>${contactFields('form', f)}</section>
-    ${S.err ? `<p class="err" role="alert">${esc(S.err)}</p>` : ''}
-    <button class="btn primary block" type="submit"${D.readonly || S.busy ? ' disabled' : ''}>${ic('calendar')}${esc(t('submit_book'))}</button>
-    <p class="note" style="text-align:center">${t('book_privacy', { p: `<a href="${esc(privacyUrl())}" target="_blank" rel="noopener">${esc(t('privacy'))}</a>` })}</p></form>`;
+    <div class="trust"><span class="ibox">${ic('camera')}</span><span><b>${esc(t('trust_title'))}</b><small>${esc(t('promise'))}</small></span></div>
+    <nav class="stepper" aria-label="${esc(t('book_title'))}"><div class="stepper-bar"><i style="width:${(step + 1) / 3 * 100}%"></i></div>
+      <ol>${BOOK_STEPS.map((k, i) => `<li><button type="button" data-act="bookstep" data-v="${i}" class="${i < step ? 'done' : i === step ? 'now' : ''}"${i === step ? ' aria-current="step"' : ''}><span class="sn">${i < step ? ic('check', 'sm') : i + 1}</span>${esc(t(k))}</button></li>`).join('')}</ol></nav>
+    ${S.err ? `<p class="err book-err" role="alert">${esc(S.err)}</p>` : ''}
+    <section class="card book-panel" aria-labelledby="book-h"><div class="intro"><span class="step-of">${esc(t('step_of', { n: step + 1 }))}</span><h2 id="book-h">${esc(t(heads[step][0]))}</h2><p class="sub">${esc(t(heads[step][1]))}</p></div>${panels[step]()}</section>
+    <div class="book-bar">${step > 0 ? `<button type="button" class="btn" data-act="bookstep" data-v="${step - 1}">${esc(t('back'))}</button>` : ''}
+      ${step < 2 ? `<button type="button" class="btn primary" data-act="booknext">${esc(t('continue'))}</button>`
+        : `<button class="btn primary" type="submit"${D.readonly || S.busy ? ' disabled' : ''}>${S.busy ? esc(t('sending')) : esc(t('submit_book'))}${S.busy ? '' : ic('check')}</button>`}</div>
+  </form>`;
 }
 function viewBooked(j) {
   return `<div class="view"><div class="intro"><h1>${esc(t('booked_title'))}</h1><p class="sub">${esc(t('booked_sub'))}</p></div>
     <div class="keytag-wrap"><div class="keytag">${logoSrc() ? `<img class="k-logo" alt="" src="${esc(logoSrc())}">` : ''}<div class="k-lbl">${esc(t('booking_code'))}</div><div class="k-ref">${esc(j.ref)}</div><div class="k-bike">${esc(vName(j.vehicle))}</div></div></div>
-    <div class="card"><dl class="dl"><dt>${esc(t('service_lbl'))}</dt><dd>${esc(svcName(j.service))}</dd><dt>${esc(t('booked_for'))}</dt><dd>${esc(fmtDay(j.date) + ' ' + j.time)}</dd>
+    <div class="card"><dl class="dl"><dt>${esc(t('service_lbl'))}</dt><dd>${esc(svcList(j))}</dd><dt>${esc(t('booked_for'))}</dt><dd>${esc(fmtDay(j.date) + ' ' + j.time)}</dd>
     ${plateText(j.vehicle) ? `<dt>${esc(t('plate'))}</dt><dd>${plate(j.vehicle)}</dd>` : ''}<dt>${esc(t('name'))}</dt><dd>${esc(j.customer.name)}</dd></dl></div>
     <button class="btn primary block" data-act="trackref" data-v="${esc(j.ref)}">${ic('pin')}${esc(t('track_this'))}</button>
     <div class="grid2"><button class="btn" data-act="copybooking" data-v="${esc(j.id)}">${ic('copy')}${esc(t('copy_details'))}</button><button class="btn" data-act="newbooking">${ic('plus')}${esc(t('book_another'))}</button></div>${contactCard()}</div>`;
@@ -1323,7 +1376,7 @@ function trackDetail(j) {
   const showDvi = j.dvi.some(d => d.rating) && (j.dviDone || j.estimate.status !== 'none');
   const notes = j.timeline.filter(e => e.kind === 'note').slice().reverse();
   return `<div class="card"><div class="tag-top"><span class="ref">${esc(j.ref)}</span>${j.example ? '<span class="tagchip">Example</span>' : ''}${pill(j.status, true)}</div>
-      <div class="tag-mid">${plate(j.vehicle)}<span class="vname"><b>${esc(vName(j.vehicle))}</b><small>${esc(svcName(j.service))}</small></span></div>
+      <div class="tag-mid">${plate(j.vehicle)}<span class="vname"><b>${esc(vName(j.vehicle))}</b><small>${esc(svcList(j))}</small></span></div>
       <p class="note">${esc(j.source === 'walkin' ? t('walkin') + ' · ' + fmtDay(j.date) : t('booked_for') + ' ' + fmtDay(j.date) + ' ' + j.time)}${j.mechanic ? ' · ' + esc(t('mechanic')) + ' ' + esc(j.mechanic) : ''}</p></div>
     ${nc ? `<div class="banner">${esc(t('new_updates', { n: nc }))}</div>` : ''}
     ${est}${pay}
@@ -1364,7 +1417,7 @@ function viewJob() {
   const TB = { work: tabWork, overview: tabOverview, inspect: tabInspect, parts: tabParts, photos: tabPhotos, chat: tabChat, pay: tabPay, history: j2 => `<div class="card"><h3>${esc(t('history_veh'))}</h3>${historyHtml(j2, false)}</div>` };
   return `<div class="view"><button class="back" data-act="go" data-v="${back}">‹ ${esc(t(back === 'myjobs' ? 'my_jobs' : 'all_jobs'))}</button>${roBanner()}
     <div class="card"><div class="tag-top"><span class="ref">${esc(j.ref)}</span><span class="mini">${esc(isRO ? t('doc_ro') : t('doc_estimate'))}</span>${j.example ? '<span class="tagchip">Example</span>' : ''}${pill(j.status)}</div>
-      <div class="tag-mid">${plate(j.vehicle)}<span class="vname"><b>${esc(vName(j.vehicle))}${j.vehicle.year ? ' · ' + esc(j.vehicle.year) : ''}</b><small>${esc(svcName(j.service))} · ${esc(j.customer.name)}${j.mechanic ? ' · ' + esc(j.mechanic) : ''}</small></span></div></div>
+      <div class="tag-mid">${plate(j.vehicle)}<span class="vname"><b>${esc(vName(j.vehicle))}${j.vehicle.year ? ' · ' + esc(j.vehicle.year) : ''}</b><small>${esc(svcList(j))} · ${esc(j.customer.name)}${j.mechanic ? ' · ' + esc(j.mechanic) : ''}</small></span></div></div>
     <div class="tabs" role="tablist">${tabs.map(x => `<button role="tab" data-act="tab" data-v="${x}" aria-selected="${tab === x}">${ic(TAB_IC[x])}${esc(t('tab_' + x))}${x === 'chat' && unreadChat(j) ? '<span class="badge">!</span>' : ''}</button>`).join('')}</div>
     ${TB[tab](j)}</div>`;
 }
@@ -1860,7 +1913,7 @@ function customerMsg(j) {
 }
 
 /* ================= actions ================= */
-const READ_ACTS = ['appkind', 'signout', 'authmode', 'lang', 'role', 'go', 'open', 'openjob', 'openpart', 'tab', 'pick', 'clearphoto', 'newbooking', 'trackref', 'trackpick', 'copybooking', 'estyn', 'estall', 'me',
+const READ_ACTS = ['svctoggle', 'rmphoto', 'booknext', 'bookstep', 'appkind', 'signout', 'authmode', 'lang', 'role', 'go', 'open', 'openjob', 'openpart', 'tab', 'pick', 'clearphoto', 'newbooking', 'trackref', 'trackpick', 'copybooking', 'estyn', 'estall', 'me',
   'linekind', 'paymethod', 'copyinvoice', 'copymsg', 'apptday', 'boardmode', 'stockf', 'copyorder', 'period', 'lowstock', 'dlgno', 'fit', 'fitpt', 'fitold', 'odo', 'odofuel', 'install', 'installno', 'copyapp', 'shareapp'];
 const A = {
   lang: el => { lang = el.dataset.v; lsSet('motoapp.lang', lang); render(); },
@@ -1881,17 +1934,21 @@ const A = {
     else if (key === 'now') obj.now = !!v;
     else obj[key] = v;
     if (key === 'date') obj.time = '';
-    if (key === 'vtype') { obj.brand = ''; const svc = SERVICES.find(s => s.key === obj.service); if (svc && svc.for !== 'both' && svc.for !== v) obj.service = ''; }
+    if (key === 'vtype') { obj.brand = ''; const fits = k => { const svc = SERVICES.find(s => s.key === k); return !svc || svc.for === 'both' || svc.for === v; }; if (!fits(obj.service)) obj.service = ''; if (Array.isArray(obj.services)) obj.services = obj.services.filter(fits); }
     S.err = ''; render();
   },
   clearphoto: el => { const k = el.dataset.v; if (k.indexOf('dlg.') === 0) { S.dlg[k.slice(4)] = null; renderDialog(); return; } setPath(S, k, null); render(); },
   appkind: el => { S.appKind = el.dataset.v; lsSet('motoapp.kind', S.appKind); const r = kindRoles(S.appKind)[0]; setRole(r); go(S.lastStaff[r] || HOME[r]); },
   signout: () => { if (sb) sb.auth.signOut(); location.hash = 'book'; },
   authmode: () => { S.authMode = S.authMode === 'up' ? 'in' : 'up'; S.authErr = ''; render(); },
-  newbooking: () => { S.booked = null; S.bookedId = null; S.form = blankForm(); render(); window.scrollTo(0, 0); },
+  newbooking: () => { S.booked = null; S.bookedId = null; S.form = blankForm(); S.bookStep = 0; render(); window.scrollTo(0, 0); },
+  svctoggle: el => { const f = S.form, k = el.dataset.v; f.services = (f.services || []).indexOf(k) >= 0 ? f.services.filter(x => x !== k) : (f.services || []).concat(k); f.service = f.services[0] || ''; S.err = ''; render(); },
+  rmphoto: el => { S.form.photos = (S.form.photos || []).filter((_, i) => i !== Number(el.dataset.v)); render(); },
+  booknext: () => goBookStep((S.bookStep || 0) + 1),
+  bookstep: el => goBookStep(Number(el.dataset.v)),
   trackref: el => { S.trackQ = S.trackDone = el.dataset.v; S.trackPick = null; S.bookedId = null; S.booked = null; go('track'); if (custLive()) refreshTrack(); },
   trackpick: el => { S.trackPick = el.dataset.v || null; S.est = {}; render(); window.scrollTo(0, 0); },
-  copybooking: el => { const j = D.jobs.get(el.dataset.v) || (S.booked && S.booked.id === el.dataset.v ? S.booked : null); if (j) copy([D.settings.name, t('booking_code') + ': ' + j.ref, svcName(j.service), vName(j.vehicle) + (plateText(j.vehicle) ? ' · ' + plateText(j.vehicle) : ''), fmtDay(j.date) + ' ' + j.time].join('\n')); },
+  copybooking: el => { const j = D.jobs.get(el.dataset.v) || (S.booked && S.booked.id === el.dataset.v ? S.booked : null); if (j) copy([D.settings.name, t('booking_code') + ': ' + j.ref, svcList(j), vName(j.vehicle) + (plateText(j.vehicle) ? ' · ' + plateText(j.vehicle) : ''), fmtDay(j.date) + ' ' + j.time].join('\n')); },
   estyn: el => { S.est[el.dataset.k] = el.dataset.v; render(); },
   estall: () => { const j = currentTrackJob(); if (j) proposed(j).forEach(l => { S.est[l.id] = 'y'; }); render(); },
   answer: el => {
@@ -2047,6 +2104,12 @@ const A = {
   dlgno: () => closeDlg(),
   dlgyes: () => { const f = confirmFn; closeDlg(); if (f) f(); }
 };
+function goBookStep(n) {
+  const cur = S.bookStep || 0;
+  if (n > cur) for (let i = cur; i < n; i++) { const e = bookStepErr(i, S.form); if (e) { S.bookStep = i; S.err = e; render(); const x = document.querySelector('.book-err'); if (x) x.scrollIntoView({ block: 'center' }); return; } }
+  S.bookStep = Math.max(0, Math.min(2, n)); S.err = ''; render();
+  const top = document.querySelector('.stepper'); if (top) window.scrollTo(0, Math.max(0, top.getBoundingClientRect().top + window.scrollY - (document.getElementById('top').offsetHeight || 0) - 12));
+}
 function withJob(fn) { const j = cj(S.id); if (!j) return; fn(j); saveJ(j); render(); }
 function mergeNotes(j) { Object.keys(S.dviNotes).forEach(k => { const d = j.dvi.find(x => x.key === k); if (d) d.note = S.dviNotes[k]; }); S.dviNotes = {}; }
 function currentTrackJob() { if (custLive()) return S.trackJobs.find(j => j.id === S.trackPick) || S.trackJobs[0]; const res = findJobs(S.trackDone); return res.length === 1 ? res[0] : res.find(j => j.id === S.trackPick); }
@@ -2062,17 +2125,22 @@ function setPath(obj, path, val) { const p = path.split('.'); let o = obj; for (
 
 /* ================= forms ================= */
 async function bookLive(f) {
+  if (S.busy) return;
   S.err = ''; S.busy = true; render();
   try {
-    let pid = null;
-    if (f.photo) { pid = newId('b'); const up = await sb.storage.from('photos').upload(photoPath(pid), dataUrlToBlob(f.photo), { contentType: 'image/jpeg' }); if (up.error) pid = null; }
-    const v = vehicleFrom(f);
-    const res = await rpc('book', { j: { service: f.service, vehicle: v, problem: f.problem.trim(), date: f.date, time: f.time, photo: pid, loc: curBranch(),
+    const pids = [];
+    for (const url of (f.photos || []).slice(0, 4)) {
+      const pid = newId('b');
+      const up = await sb.storage.from('photos').upload(photoPath(pid), dataUrlToBlob(url), { contentType: 'image/jpeg' });
+      if (!up.error) pids.push(pid);
+    }
+    const v = vehicleFrom(f), svcs = (f.services || []).slice(0, 8);
+    const res = await rpc('book', { j: { service: svcs[0] || 'other', services: svcs, vehicle: v, problem: f.problem.trim(), date: f.date, time: f.time, photo: pids[0] || null, photos: pids, loc: curBranch(),
       customer: { name: f.name.trim(), phone: f.phone.trim(), line: f.line.trim() } } });
-    S.booked = { id: res.id, ref: res.ref, vehicle: v, service: f.service, date: f.date, time: f.time, customer: { name: f.name.trim() } };
+    S.booked = { id: res.id, ref: res.ref, vehicle: v, service: svcs[0], services: svcs, date: f.date, time: f.time, customer: { name: f.name.trim() } };
     S.trackCode = res.ref; S.trackPhone = f.phone.trim(); S.trackJobs = []; S.trackPick = null;
     lsSet('motoapp.lastRef', res.ref); lsSet('motoapp.lastPhone', S.trackPhone);
-    S.form = blankForm(); S.slotCounts = {};
+    S.form = blankForm(); S.bookStep = 0; S.slotCounts = {};
   } catch (e) { S.err = rpcError(e); if (/slot_full/.test(String(e && e.message))) { delete S.slotCounts[f.date]; f.time = ''; } }
   S.busy = false; render(); window.scrollTo(0, 0);
 }
@@ -2080,23 +2148,17 @@ const FORMS = {
   auth: () => doAuth(),
   noop: () => {},
   book: () => {
-    const f = S.form, miss = [];
-    if (!f.brand && !f.model.trim()) miss.push(t('brand'));
-    if (!f.service) miss.push(t('service'));
-    if (!f.date) miss.push(t('day'));
-    if (!f.time) miss.push(t('time'));
-    if (!f.name.trim()) miss.push(t('name'));
-    if (digits(f.phone).length < 9) miss.push(t('phone'));
-    if (miss.length) { S.err = t('need', { f: miss.join(', ') }); render(); const e = document.querySelector('.err'); if (e) e.scrollIntoView({ block: 'center' }); return; }
+    const f = S.form;
+    for (let i = 0; i < 3; i++) { const e = bookStepErr(i, f); if (e) { S.bookStep = i; S.err = e; render(); const x = document.querySelector('.book-err'); if (x) x.scrollIntoView({ block: 'center' }); return; } }
     if (slotUsed(f.date, f.time) >= Math.max(1, Number(D.settings.perSlot) || 1)) { f.time = ''; S.err = t('need', { f: t('time') }); render(); return; }
     if (custLive()) { bookLive(f); return; }
-    const now = nowIso();
-    const j = norm({ id: newId('j'), ref: newRef(), loc: curBranch(), createdAt: now, source: 'online', service: f.service, vehicle: vehicleFrom(f), problem: f.problem.trim(),
+    const now = nowIso(), svcs = (f.services || []).slice(0, 8);
+    const j = norm({ id: newId('j'), ref: newRef(), loc: curBranch(), createdAt: now, source: 'online', service: svcs[0] || 'other', services: svcs, vehicle: vehicleFrom(f), problem: f.problem.trim(),
       date: f.date, time: f.time, customer: { name: f.name.trim(), phone: f.phone.trim(), line: f.line.trim() }, status: 'booked', mechanic: '',
       timeline: [{ at: now, kind: 'status', status: 'booked', by: 'customer' }] });
-    if (f.photo) addPhotoMeta(j, f.photo, { kind: 'customer', stage: 'booked', by: 'customer' });
+    (f.photos || []).slice(0, 4).forEach(url => addPhotoMeta(j, url, { kind: 'customer', stage: 'booked', by: 'customer' }));
     saveJ(j); lsSet('motoapp.lastRef', j.ref);
-    S.bookedId = j.id; S.form = blankForm(); S.err = ''; render(); window.scrollTo(0, 0);
+    S.bookedId = j.id; S.form = blankForm(); S.bookStep = 0; S.err = ''; render(); window.scrollTo(0, 0);
   },
   track: () => {
     if (custLive()) {
@@ -2266,6 +2328,11 @@ document.addEventListener('change', e => {
   if (b && el.tagName === 'SELECT') { setPath(S, b, el.dataset.num ? Number(el.value) : el.value); return; }
   const target = el.dataset.photoTarget;
   if (target === 'logo' && el.files && el.files[0]) { compress(el.files[0], 320, 'image/png').then(url => { if (S.setDraft) { S.setDraft.logo = url; render(); } }, () => toast(t('err_photo'))); return; }
+  if (target === 'form.photos+' && el.files && el.files.length) {
+    const room = Math.max(0, 4 - (S.form.photos || []).length), files = Array.from(el.files).slice(0, room);
+    files.reduce((pr, file) => pr.then(() => compress(file).then(url => { S.form.photos = (S.form.photos || []).concat(url).slice(0, 4); }, () => toast(t('err_photo')))), Promise.resolve()).then(() => render());
+    el.value = ''; return;
+  }
   if (target && el.files && el.files[0]) {
     compress(el.files[0]).then(url => {
       if (target.indexOf('dlg.') === 0) { if (S.dlg) { S.dlg[target.slice(4)] = url; renderDialog(); } return; }
@@ -2320,7 +2387,7 @@ function start(saved) {
 }
 const hot = window.claude && window.claude.hot;
 if (hot && typeof hot.snapshot === 'function') {
-  hot.snapshot(() => ({ lang: lang, role: S.role, me: S.me, form: Object.assign({}, S.form, { photo: null }), walk: Object.assign({}, S.walk, { photo: null }),
+  hot.snapshot(() => ({ lang: lang, role: S.role, me: S.me, form: Object.assign({}, S.form, { photo: null, photos: [] }), walk: Object.assign({}, S.walk, { photo: null }),
     trackQ: S.trackQ, trackDone: S.trackDone, trackPick: S.trackPick, bookedId: S.bookedId, boardMode: S.boardMode, period: S.period, stockF: S.stockF, tab: S.tab }));
 }
 if (hot && typeof hot.ready === 'function') hot.ready(start); else start((hot && hot.data) || {});
