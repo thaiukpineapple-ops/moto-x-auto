@@ -945,13 +945,136 @@ function renderTop() {
     ${allowedRoles().length > 1 && S.view !== 'signin' ? `<div class="roles"><div class="seg" role="group" aria-label="Role">${allowedRoles().map(r => `<button data-act="role" data-v="${r}" aria-pressed="${S.role === r}">${ic(ROLE_IC[r])}${esc(t('role_' + r))}</button>`).join('')}</div></div>` : ''}
     ${meta}${installBarHtml()}`;
 }
+/* ---------- floating menu bar, same as the growers app ----------
+   Frosted glass pill. A lens sits behind the active tab and springs to the new one.
+   Press and hold: the lens lifts into glass and follows your finger across the tabs; let go to open that tab. */
+const NB = { html: '', idx: 0, n: 1, tabW: 0, x: null, vx: 0, tx: null, xs: null, lift: 0, vl: 0, lt: null, down: null, drag: false, left: 0, raf: 0, t: 0, tap: 0, tick: 0 };
+const NB_SPRING = { follow: [26, 520, 0.5], settle: [20, 300, 0.7], lift: [14, 420, 0.6] }; // damping, stiffness, mass
+const NB_STILL = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 function renderNav() {
-  if (S.view === 'signin') { document.getElementById('nav').innerHTML = ''; return; }
+  const nav = document.getElementById('nav');
+  if (S.view === 'signin') { nav.innerHTML = ''; NB.html = ''; return; }
   const cur = S.view === 'job' ? (S.role === 'mechanic' ? 'myjobs' : 'board') : S.view === 'part' ? 'stock' : S.view;
-  document.getElementById('nav').innerHTML = '<div class="nav-in">' + NAV[S.role].map(v => {
+  const items = NAV[S.role];
+  const html = items.map(v => {
     const b = navBadge(v);
-    return `<a href="#${v}"${cur === v ? ' aria-current="page"' : ''}>${ic(NAV_IC[v])}<span>${esc(t('nav_' + v))}</span>${b ? `<span class="badge">${b}</span>` : ''}</a>`;
-  }).join('') + '</div>';
+    return `<a href="#${v}"${cur === v ? ' aria-current="page"' : ''} draggable="false">${ic(NAV_IC[v])}<span>${esc(t('nav_' + v))}</span>${b ? `<span class="badge">${b}</span>` : ''}</a>`;
+  }).join('');
+  let fresh = false;
+  if (!nav.querySelector('.nav-in')) {
+    nav.innerHTML = '<div class="nav-in"><div class="nav-glass"></div><div class="nav-row"><span class="nav-lens" aria-hidden="true"><i class="lens-pill"></i><i class="lens-glass"></i></span><div class="nav-items"></div></div></div>';
+    navBind(nav.querySelector('.nav-row')); fresh = true;
+  }
+  if (fresh || NB.html !== html) nav.querySelector('.nav-items').innerHTML = html;
+  NB.html = html;
+  const idx = items.indexOf(cur);
+  const moved = idx >= 0 && idx !== NB.idx;
+  if (idx >= 0) NB.idx = idx;
+  navLayout();
+  if (NB.drag) return;
+  navTo(NB.idx, fresh || NB.x == null || NB_STILL() ? 'jump' : moved ? 'settle' : 'keep');
+}
+function navLayout() {
+  const row = document.querySelector('#nav .nav-row');
+  if (!row) return;
+  NB.n = row.querySelectorAll('.nav-items a').length || 1;
+  NB.tabW = row.clientWidth / NB.n;
+  row.querySelector('.nav-lens').style.width = Math.max(NB.tabW - 4, 0) + 'px';
+}
+function navCenter(i) { return i * NB.tabW + NB.tabW / 2; }
+function navTo(i, mode) {
+  if (!NB.tabW) return;
+  const target = navCenter(i);
+  if (mode === 'jump' || NB.x == null) { NB.x = target; NB.vx = 0; NB.tx = null; navPaint(); return; }
+  if (mode === 'keep' && NB.tx == null && Math.abs(NB.x - target) < 0.5) { navPaint(); return; }
+  NB.tx = target; NB.xs = NB_SPRING.settle; navRun();
+}
+function navClampX(px) { return Math.min(Math.max(px, 0.4 * NB.tabW), NB.n * NB.tabW - 0.4 * NB.tabW); }
+function navIndexAt(px) { return Math.min(Math.max(Math.floor(navClampX(px) / NB.tabW), 0), NB.n - 1); }
+function navFollow(clientX) {
+  const px = navClampX(clientX - NB.left);
+  if (NB_STILL()) { NB.x = px; NB.tx = null; navPaint(); } else { NB.tx = px; NB.xs = NB_SPRING.follow; navRun(); }
+  const i = navIndexAt(px);
+  if (i !== NB.tick) { NB.tick = i; try { if (navigator.vibrate) navigator.vibrate(6); } catch (e) {} }
+}
+function navLift(up) {
+  if (NB_STILL()) return;
+  if (up) { NB.down = null; NB.lt = 1; } else { NB.lt = null; NB.down = { from: NB.lift, at: performance.now() + 70 }; }
+  navRun();
+}
+function navGo(i) {
+  const v = NAV[S.role][i];
+  if (!v) return;
+  if (location.hash.replace('#', '') !== v) location.hash = v;
+  else window.scrollTo({ top: 0, behavior: NB_STILL() ? 'auto' : 'smooth' });
+}
+function navBind(row) {
+  row.addEventListener('pointerdown', e => {
+    if (e.button !== 0 || !e.isPrimary) return;
+    navLayout();
+    NB.left = row.getBoundingClientRect().left; NB.drag = true; NB.tick = NB.idx;
+    try { row.setPointerCapture(e.pointerId); } catch (err) {}
+    navLift(true); navFollow(e.clientX);
+    e.preventDefault();
+  });
+  row.addEventListener('pointermove', e => { if (NB.drag) navFollow(e.clientX); });
+  const end = (e, cancelled) => {
+    if (!NB.drag) return;
+    NB.drag = false; navLift(false);
+    const i = cancelled ? NB.idx : navIndexAt(e.clientX - NB.left);
+    NB.tx = navCenter(i); NB.xs = NB_SPRING.settle; navRun();
+    if (!cancelled) { NB.tap = Date.now(); navGo(i); }
+  };
+  row.addEventListener('pointerup', e => end(e, false));
+  row.addEventListener('pointercancel', e => end(e, true));
+  // the tap was already handled above; keyboard Enter still follows the link normally
+  row.addEventListener('click', e => { if (e.detail > 0 || Date.now() - NB.tap < 400) e.preventDefault(); });
+}
+function navRun() { if (!NB.raf) { NB.t = 0; NB.raf = requestAnimationFrame(navStep); } }
+function navStep(now) {
+  NB.raf = 0;
+  const dt = NB.t ? Math.min(0.05, (now - NB.t) / 1000) : 1 / 60;
+  NB.t = now;
+  let busy = false;
+  const spring = (x, v, target, cfg) => {
+    const [c, k, m] = cfg, steps = Math.max(1, Math.ceil(dt / 0.004)), h = dt / steps;
+    for (let s = 0; s < steps; s++) { const a = (-k * (x - target) - c * v) / m; v += a * h; x += v * h; }
+    return [x, v];
+  };
+  if (NB.tx != null) {
+    [NB.x, NB.vx] = spring(NB.x, NB.vx, NB.tx, NB.xs || NB_SPRING.settle);
+    if (Math.abs(NB.x - NB.tx) < 0.25 && Math.abs(NB.vx) < 4) { NB.x = NB.tx; NB.vx = 0; if (!NB.drag) NB.tx = null; } else busy = true;
+    if (NB.drag) busy = true;
+  }
+  if (NB.lt != null) {
+    [NB.lift, NB.vl] = spring(NB.lift, NB.vl, NB.lt, NB_SPRING.lift);
+    if (Math.abs(NB.lift - NB.lt) < 0.002 && Math.abs(NB.vl) < 0.02) { NB.lift = NB.lt; NB.vl = 0; } else busy = true;
+  } else if (NB.down) {
+    const p = Math.min(1, Math.max(0, (now - NB.down.at) / 260)), e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+    NB.lift = NB.down.from * (1 - e); NB.vl = 0;
+    if (p >= 1) { NB.lift = 0; NB.down = null; } else busy = true;
+  }
+  navPaint();
+  if (busy) NB.raf = requestAnimationFrame(navStep);
+}
+function navPaint() {
+  const row = document.querySelector('#nav .nav-row');
+  if (!row || NB.x == null) return;
+  const lw = Math.max(NB.tabW - 4, 0), L = NB.lift;
+  const lens = row.querySelector('.nav-lens');
+  lens.style.transform = `translateX(${(NB.x - lw / 2).toFixed(2)}px) scale(${(1 + 0.16 * L).toFixed(4)}, ${(1 + 0.26 * L).toFixed(4)})`;
+  lens.firstChild.style.opacity = (1 - L).toFixed(3);
+  lens.lastChild.style.opacity = L.toFixed(3);
+  row.querySelectorAll('.nav-items a').forEach((a, i) => {
+    const near = Math.max(0, 1 - Math.abs(NB.x - navCenter(i)) / (NB.tabW || 1));
+    a.style.transform = L > 0.001 ? `scale(${(1 + 0.14 * L * near).toFixed(4)})` : '';
+  });
+}
+window.addEventListener('resize', () => { navLayout(); if (!NB.drag) navTo(NB.idx, 'jump'); });
+// like the growers app, the bar steps aside while the phone keyboard is open
+if (window.visualViewport) {
+  const kb = () => document.body && document.body.classList.toggle('kb-open', window.innerHeight - visualViewport.height > 150 && /^(INPUT|TEXTAREA|SELECT)$/.test((document.activeElement || {}).tagName || ''));
+  visualViewport.addEventListener('resize', kb); window.addEventListener('focusout', () => setTimeout(kb, 50));
 }
 function navBadge(v) {
   if (v === 'today') return attentionList().length;
